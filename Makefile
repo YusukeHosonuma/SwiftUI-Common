@@ -1,0 +1,2 @@
+format:
+	mint run swiftformat .
