@@ -10,7 +10,7 @@ Since this is an **experimental library**,, we recommend that you copy (or use a
   - `TextEdit` (add placeholder to `TextEditor`)
   - `WebView` (bridge to `WKWebView`)
 - AppKit
-  - WindowController
+  - `WindowController` (bridge to `NSWindowController`)
 - UIKit
   - `ActivityView` (bridge to `UIActivityViewController`)
 
