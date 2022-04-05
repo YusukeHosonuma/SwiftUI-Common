@@ -47,29 +47,29 @@ public struct WebView: Representable {
 
     private func makeWKWebView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        state.webView = webView
+        state.configure(webView: webView)
 
         let request = URLRequest(url: url)
         webView.navigationDelegate = context.coordinator
-
-        // ☑️ Note:
-        // This is not work on NavigationView. (NavigationView swipe-back takes precedence)
-        //
-        // webView.allowsBackForwardNavigationGestures = true
-
         webView.load(request)
         return webView
     }
 }
 
 public final class WebViewState: ObservableObject {
+    public typealias Configure = (WKWebView) -> ()
+
+    @Published public var isFirstLoading = true
     @Published public var isLoading = true
     @Published public var canGoBack = false
     @Published public var canGoForward = false
 
     fileprivate var webView: WKWebView?
+    private let configureWKWebView: Configure?
 
-    public init() {}
+    public init(_ configureWKWebView: Configure? = nil) {
+        self.configureWKWebView = configureWKWebView
+    }
 
     public func goBack() {
         webView?.goBack()
@@ -77,6 +77,28 @@ public final class WebViewState: ObservableObject {
 
     public func goForward() {
         webView?.goForward()
+    }
+    
+    fileprivate func configure(webView: WKWebView) {
+        configureWKWebView?(webView)
+        self.webView = webView
+    }
+    
+    fileprivate func didStartProvisionalNavigation() {
+        isLoading = true
+        updateButtons()
+    }
+    
+    fileprivate func didFinish() {
+        isFirstLoading = false
+        isLoading = false
+        updateButtons()
+    }
+    
+    private func updateButtons() {
+        guard let webView = webView else { return }
+        canGoBack = webView.canGoBack
+        canGoForward = webView.canGoForward
     }
 }
 
@@ -89,14 +111,15 @@ public class WebViewCoordinator: NSObject, WKNavigationDelegate {
 
     // MARK: WKNavigationDelegate
 
-    public func webView(_: WKWebView, didStartProvisionalNavigation _: WKNavigation!) {
-        // 💡 Note: not show progress in page navigation.
-        // state.isLoading = true
+    public func webView(_ webView: WKWebView, didStartProvisionalNavigation _: WKNavigation!) {
+        state.didStartProvisionalNavigation()
     }
 
     public func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
-        state.isLoading = false
-        state.canGoBack = webView.canGoBack
-        state.canGoForward = webView.canGoForward
+        state.didFinish()
+    }
+    
+    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        state.didFinish()
     }
 }

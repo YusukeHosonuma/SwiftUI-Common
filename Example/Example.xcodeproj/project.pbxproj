@@ -13,6 +13,10 @@
 		70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4A27FBDC3F00483D24 /* ContentView.swift */; };
 		70E35F5D27FBDC4000483D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E35F4B27FBDC4000483D24 /* Assets.xcassets */; };
 		70E35F5E27FBDC4000483D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E35F4B27FBDC4000483D24 /* Assets.xcassets */; };
+		70E35F6E27FBDF8F00483D24 /* SwiftUICommon in Frameworks */ = {isa = PBXBuildFile; productRef = 70E35F6D27FBDF8F00483D24 /* SwiftUICommon */; };
+		70E35F7027FBDFA200483D24 /* SwiftUICommon in Frameworks */ = {isa = PBXBuildFile; productRef = 70E35F6F27FBDFA200483D24 /* SwiftUICommon */; };
+		70E35F7227FBE71B00483D24 /* SampleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F7127FBE71B00483D24 /* SampleWebView.swift */; };
+		70E35F7327FBE71B00483D24 /* SampleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F7127FBE71B00483D24 /* SampleWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		70E35F5027FBDC4000483D24 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E35F5627FBDC4000483D24 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E35F5827FBDC4000483D24 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		70E35F6B27FBDF2400483D24 /* SwiftUICommon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUICommon; path = ..; sourceTree = "<group>"; };
+		70E35F7127FBE71B00483D24 /* SampleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E35F6E27FBDF8F00483D24 /* SwiftUICommon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E35F7027FBDFA200483D24 /* SwiftUICommon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,15 +53,18 @@
 		70E35F4327FBDC3F00483D24 = {
 			isa = PBXGroup;
 			children = (
+				70E35F6A27FBDF2400483D24 /* Packages */,
 				70E35F4827FBDC3F00483D24 /* Shared */,
 				70E35F5727FBDC4000483D24 /* macOS */,
 				70E35F5127FBDC4000483D24 /* Products */,
+				70E35F6C27FBDF8F00483D24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		70E35F4827FBDC3F00483D24 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				70E35F7427FBECEE00483D24 /* View */,
 				70E35F4927FBDC3F00483D24 /* ExampleApp.swift */,
 				70E35F4A27FBDC3F00483D24 /* ContentView.swift */,
 				70E35F4B27FBDC4000483D24 /* Assets.xcassets */,
@@ -78,6 +89,29 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		70E35F6A27FBDF2400483D24 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				70E35F6B27FBDF2400483D24 /* SwiftUICommon */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		70E35F6C27FBDF8F00483D24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70E35F7427FBECEE00483D24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70E35F7127FBE71B00483D24 /* SampleWebView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +128,9 @@
 			dependencies = (
 			);
 			name = "Example (iOS)";
+			packageProductDependencies = (
+				70E35F6D27FBDF8F00483D24 /* SwiftUICommon */,
+			);
 			productName = "Example (iOS)";
 			productReference = 70E35F5027FBDC4000483D24 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +148,9 @@
 			dependencies = (
 			);
 			name = "Example (macOS)";
+			packageProductDependencies = (
+				70E35F6F27FBDFA200483D24 /* SwiftUICommon */,
+			);
 			productName = "Example (macOS)";
 			productReference = 70E35F5627FBDC4000483D24 /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
+				70E35F7227FBE71B00483D24 /* SampleWebView.swift in Sources */,
 				70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
+				70E35F7327FBE71B00483D24 /* SampleWebView.swift in Sources */,
 				70E35F5A27FBDC4000483D24 /* ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +359,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,7 +389,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,7 +423,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.penginmura.Example;
 				PRODUCT_NAME = Example;
@@ -409,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.penginmura.Example;
 				PRODUCT_NAME = Example;
@@ -450,6 +492,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70E35F6D27FBDF8F00483D24 /* SwiftUICommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUICommon;
+		};
+		70E35F6F27FBDFA200483D24 /* SwiftUICommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUICommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70E35F4427FBDC3F00483D24 /* Project object */;
 }

@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import SwiftUICommon
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                NavigationLink("WebView") {
+                    SampleWebView()
+                        .navigationBarTitleDisplayMode(.inline)
+                }
+            }
+            .navigationTitle("Example")
+        }
     }
 }
 
