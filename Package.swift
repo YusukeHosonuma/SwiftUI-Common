@@ -4,13 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUI-Common",
+    name: "SwiftUICommon",
+    platforms: [
+        .iOS(.v14),
+        .macOS(.v11),
+    ],
     products: [
-        .library(name: "SwiftUI-Common", targets: ["SwiftUI-Common"]),
+        .library(name: "SwiftUICommon", targets: ["SwiftUICommon"]),
     ],
     dependencies: [],
     targets: [
-        .target(name: "SwiftUI-Common", dependencies: []),
-        .testTarget(name: "SwiftUI-CommonTests", dependencies: ["SwiftUI-Common"]),
+        .target(name: "SwiftUICommon", dependencies: []),
     ]
 )
