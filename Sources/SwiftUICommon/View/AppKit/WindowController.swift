@@ -22,7 +22,7 @@ public final class WindowController<Content: View> {
         windowController = NSWindowController(window: window)
     }
 
-    func show() {
+    public func show() {
         windowController?.showWindow(windowController?.window)
     }
 }
