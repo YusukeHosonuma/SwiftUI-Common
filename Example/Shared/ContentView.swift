@@ -14,7 +14,9 @@ struct ContentView: View {
             List {
                 NavigationLink("WebView") {
                     SampleWebView()
+                    #if os(iOS)
                         .navigationBarTitleDisplayMode(.inline)
+                    #endif
                 }
             }
             .navigationTitle("Example")
