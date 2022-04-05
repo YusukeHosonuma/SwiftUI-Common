@@ -2,7 +2,7 @@
 
 SwiftUI components that seem to be highly reusable.
 
-Since this is an **experimental library**,, we recommend that you copy (or use as refererence) and use the source.
+Since this is an **experimental library**, we recommend that you copy (or use as refererence) and use the source.
 
 ## View
 
