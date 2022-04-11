@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701CAB61280428DE00A2D597 /* WhenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CAB60280428DE00A2D597 /* WhenView.swift */; };
+		701CAB62280428DE00A2D597 /* WhenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CAB60280428DE00A2D597 /* WhenView.swift */; };
 		70914AA02803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70914AA12803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70914AA32803FC8800358A9C /* BindingOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914AA22803FC8800358A9C /* BindingOptionalView.swift */; };
@@ -24,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701CAB60280428DE00A2D597 /* WhenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenView.swift; sourceTree = "<group>"; };
 		70914A9F2803F88200358A9C /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		70914AA22803FC8800358A9C /* BindingOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingOptionalView.swift; sourceTree = "<group>"; };
 		70E35F4927FBDC3F00483D24 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 			children = (
 				70E35F7127FBE71B00483D24 /* SampleWebView.swift */,
 				70914A9F2803F88200358A9C /* SliderView.swift */,
+				701CAB60280428DE00A2D597 /* WhenView.swift */,
 				70914AA22803FC8800358A9C /* BindingOptionalView.swift */,
 			);
 			path = View;
@@ -224,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701CAB61280428DE00A2D597 /* WhenView.swift in Sources */,
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70914AA02803F88200358A9C /* SliderView.swift in Sources */,
 				70914AA32803FC8800358A9C /* BindingOptionalView.swift in Sources */,
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701CAB62280428DE00A2D597 /* WhenView.swift in Sources */,
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				70914AA42803FC8800358A9C /* BindingOptionalView.swift in Sources */,
