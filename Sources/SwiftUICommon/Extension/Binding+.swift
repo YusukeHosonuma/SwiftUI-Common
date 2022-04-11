@@ -19,3 +19,16 @@ public extension Binding where Value: SliderValue {
         )
     }
 }
+
+public extension Binding {
+    func optionalBinding() -> Binding<Value?> {
+        .init(
+            get: { self.wrappedValue },
+            set: {
+                if let value = $0 {
+                    self.wrappedValue = value
+                }
+            }
+        )
+    }
+}

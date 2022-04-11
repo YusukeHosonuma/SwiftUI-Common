@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Shared
 //
-//  Created by 細沼祐介 on 2022/04/05.
+//  Created by Yusuke Hosonuma on 2022/04/05.
 //
 
 import SwiftUI
@@ -22,6 +22,12 @@ struct ContentView: View {
                     SliderView()
                     #if os(iOS)
                         .navigationBarTitleDisplayMode(.inline)
+                    #endif
+                }
+                NavigationLink("Binding<T> to Binding<T?>") {
+                    BindingOptionalView()
+                    #if os(iOS)
+//                        .navigationBarTitleDisplayMode(.inline)
                     #endif
                 }
             }
