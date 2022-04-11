@@ -31,3 +31,20 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 - `ViewModifier`
   - `#toggleSidebar()`
   - `#hideKeyboard()`
+
+## Install
+
+If you want.
+
+```
+let package = Package(
+    dependencies: [
+        .package(url: "https://github.com/YusukeHosonuma/SwiftUI-Common.git", from: "0.1.0"),
+    ],
+    targets: [
+        .target(name: "<your-target-name>", dependencies: [
+             .product(name: "SwiftUICommon", package: "SwiftUI-Common"),
+        ]),
+    ]
+)
+```
