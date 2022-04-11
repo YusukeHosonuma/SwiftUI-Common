@@ -18,6 +18,12 @@ struct ContentView: View {
                         .navigationBarTitleDisplayMode(.inline)
                     #endif
                 }
+                NavigationLink("SliderValue") {
+                    SliderView()
+                    #if os(iOS)
+                        .navigationBarTitleDisplayMode(.inline)
+                    #endif
+                }
             }
             .navigationTitle("Example")
         }

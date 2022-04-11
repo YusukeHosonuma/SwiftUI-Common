@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70914AA02803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
+		70914AA12803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4927FBDC3F00483D24 /* ExampleApp.swift */; };
 		70E35F5A27FBDC4000483D24 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4927FBDC3F00483D24 /* ExampleApp.swift */; };
 		70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4A27FBDC3F00483D24 /* ContentView.swift */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70914A9F2803F88200358A9C /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		70E35F4927FBDC3F00483D24 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		70E35F4A27FBDC3F00483D24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70E35F4B27FBDC4000483D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				70E35F7127FBE71B00483D24 /* SampleWebView.swift */,
+				70914A9F2803F88200358A9C /* SliderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
+				70914AA02803F88200358A9C /* SliderView.swift in Sources */,
 				70E35F7227FBE71B00483D24 /* SampleWebView.swift in Sources */,
 				70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */,
 			);
@@ -227,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
+				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				70E35F7327FBE71B00483D24 /* SampleWebView.swift in Sources */,
 				70E35F5A27FBDC4000483D24 /* ExampleApp.swift in Sources */,
 			);
