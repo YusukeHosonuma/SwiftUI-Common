@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftUICommon",
+    name: "SwiftUI-Common",
     platforms: [
         .iOS(.v14),
         .macOS(.v11),
