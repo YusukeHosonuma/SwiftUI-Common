@@ -27,7 +27,13 @@ struct ContentView: View {
                 NavigationLink("Binding<T> to Binding<T?>") {
                     BindingOptionalView()
                     #if os(iOS)
-//                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarTitleDisplayMode(.inline)
+                    #endif
+                }
+                NavigationLink(".when(<condition>)") {
+                    WhenView()
+                    #if os(iOS)
+                        .navigationBarTitleDisplayMode(.inline)
                     #endif
                 }
             }
