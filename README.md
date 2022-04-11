@@ -1,22 +1,22 @@
 # SwiftUI-Common
 
-SwiftUI components that seem to be highly reusable.
+SwiftUI components and extensions that seem to be highly reusable.
 
 Since this is an **experimental library**, we recommend that you copy (or use as refererence) and use the source.
 
 ## View
 
 - Common
-  - `TextEdit` (add placeholder to `TextEditor`)
-  - `WebView` (bridge to `WKWebView`)
+  - [TextEdit](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/TextEdit.swift) (add placeholder to [TextEditor](https://developer.apple.com/documentation/swiftui/texteditor))
+  - [WebView](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/WebView.swift) (bridge to [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview))
 - AppKit
-  - `WindowController` (bridge to `NSWindowController`)
+  - [WindowController](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/AppKit/WindowController.swift) (bridge to [NSWindowController](https://developer.apple.com/documentation/appkit/nswindowcontroller))
 - UIKit
-  - `ActivityView` (bridge to `UIActivityViewController`)
+  - [ActivityView](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/UIKit/ActivityView.swift) (bridge to [UIActivityViewController](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller))
 
 ## Modifier
 
-- `EnabledModifier` (`.enabled(<condition>)`)
+- [EnabledModifier](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Modifier/EnabledModifier.swift) (`.enabled(<condition>)`)
 
 ## Protocol
 
@@ -24,20 +24,26 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 ## Extension
 
-- `NSApplication.toggleSidebar()`
-- `UIApplication.hideKeyboard()`
-- `Task`
-  - `sleep(seconds: UInt64) async throws`
-  - `sleep(milliseconds: UInt64) async throws`
-- `View`
-  - `#toggleSidebar()`
-  - `#hideKeyboard()`
-- `ViewModifier`
-  - `#toggleSidebar()`
-  - `#hideKeyboard()`
-- [Binding](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Binding%2B.swift)
-  - `#optionalBinding() -> Binding<Value?>`
-  - `#sliderBinding() -> Binding<Double> where Value: SliderValue`
+- SwiftUI
+  - [View](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2B.swift)
+    - `toggleSidebar()`
+    - `hideKeyboard()`
+  - [ViewModifier](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/ViewModifier%2B.swift)
+    - `toggleSidebar()`
+    - `hideKeyboard()`
+  - [Binding](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Binding%2B.swift)
+    - `optionalBinding() -> Binding<Value?>`
+    - `sliderBinding() -> Binding<Double> where Value: SliderValue`
+- AppKit
+  - [NSApplication](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/AppKit/NSApplication%2B.swift)
+    - `toggleSidebar()`
+- UIKit
+  - [UIApplication](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/UIKit/UIApplication%2B.swift)
+    - `hideKeyboard()`
+- Foundation
+  - [Task](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Task%2B.swift)
+    - `sleep(seconds: UInt64) async throws`
+    - `sleep(milliseconds: UInt64) async throws`
 
 ## Install
 
@@ -55,3 +61,16 @@ let package = Package(
     ]
 )
 ```
+
+
+## Links
+
+- This library is used in the following SwiftUI applications:
+  - [Swift-Evolution-Browser](https://github.com/YusukeHosonuma/Swift-Evolution-Browser) 
+  - [E2DC](https://github.com/YusukeHosonuma/E2DC)
+- Document (Japanese):
+  - [Effective SwiftUI 候補（仮説）](https://zenn.dev/tobi462/scraps/905f2e6ac9b895)
+
+## Author
+
+Yusuke Hosonuma / [@tobi462](https://twitter.com/tobi462)
