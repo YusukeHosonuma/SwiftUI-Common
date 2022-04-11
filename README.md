@@ -53,7 +53,7 @@ If you want.
 ```swift
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/YusukeHosonuma/SwiftUI-Common.git", from: "0.1.0"),
+        .package(url: "https://github.com/YusukeHosonuma/SwiftUI-Common.git", from: "0.3.0"),
     ],
     targets: [
         .target(name: "<your-target-name>", dependencies: [
