@@ -28,6 +28,7 @@ Since this is an **experimental library**, we recommend that you copy (or use as
   - [View](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2B.swift)
     - `toggleSidebar()`
     - `hideKeyboard()`
+    - `when(<condition>) { view in ... }`
   - [ViewModifier](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/ViewModifier%2B.swift)
     - `toggleSidebar()`
     - `hideKeyboard()`
