@@ -70,7 +70,7 @@ let package = Package(
   - [Swift-Evolution-Browser](https://github.com/YusukeHosonuma/Swift-Evolution-Browser) 
   - [E2DC](https://github.com/YusukeHosonuma/E2DC)
 - Document (Japanese):
-  - [Effective SwiftUI 候補（仮説）](https://zenn.dev/tobi462/scraps/905f2e6ac9b895)
+  - [Effective SwiftUI 候補（仮説）](https://github.com/YusukeHosonuma/Effective-SwiftUI)
 
 ## Author
 
