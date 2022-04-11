@@ -35,8 +35,9 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 - `ViewModifier`
   - `#toggleSidebar()`
   - `#hideKeyboard()`
-- [Binding where Value: SliderValue](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Binding%2B.swift)
-  - `sliderBinding() -> Binding<Double>`
+- [Binding](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Binding%2B.swift)
+  - `#optionalBinding() -> Binding<Value?>`
+  - `#sliderBinding() -> Binding<Double> where Value: SliderValue`
 
 ## Install
 
