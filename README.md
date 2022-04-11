@@ -36,7 +36,7 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 If you want.
 
-```
+```swift
 let package = Package(
     dependencies: [
         .package(url: "https://github.com/YusukeHosonuma/SwiftUI-Common.git", from: "0.1.0"),
