@@ -16,7 +16,8 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 ## Modifier
 
-- [EnabledModifier](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Modifier/EnabledModifier.swift) (`.enabled(<condition>)`)
+- [`.enabled(_ condition: Bool)`](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Modifier/EnabledModifier.swift)
+- [`.border(_ color: Color, width: CGFloat = 1, edge: Edge.Set)`](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Modifier/BorderModifier.swift) ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/5))
 
 ## Protocol
 
