@@ -13,72 +13,51 @@ struct ContentView: View {
         NavigationView {
             List {
                 Section("Bridge") {
-                    NavigationLink("WebView") {
+                    navigationLink("WebView") {
                         SampleWebView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
                 }
 
                 Section("Binding") {
-                    NavigationLink("Binding<T> to Binding<T?>") {
+                    navigationLink("Binding<T> to Binding<T?>") {
                         BindingOptionalView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
                 }
 
                 Section("View+") {
-                    NavigationLink(".when(<condition>)") {
+                    navigationLink(".when(<condition>)") {
                         WhenView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
-                    NavigationLink(".whenLet(<optional-value>)") {
+                    navigationLink(".whenLet(<optional-value>)") {
                         WhenLetView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
-                    NavigationLink(".border(.red, width: 1, edge: .top)") {
+                    navigationLink(".border(.red, width: 1, edge: .top)") {
                         BorderSampleView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
                 }
 
                 Section("Misc") {
-                    NavigationLink("SliderValue") {
+                    navigationLink("SliderValue") {
                         SliderView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
                 }
 
                 Section("Debug") {
-                    NavigationLink(".debug { ... }") {
+                    navigationLink(".debug { ... }") {
                         DebugView()
-                        #if os(iOS)
-                            .navigationBarTitleDisplayMode(.inline)
-                        #endif
                     }
                 }
             }
             .navigationTitle("Example")
         }
     }
-}
 
-@available(iOS, introduced: 13.0, deprecated: 15.0)
-extension Section where Parent == Text, Content: View, Footer == EmptyView {
-    public init<S>(_ title: S, @ViewBuilder content: () -> Content) where S: StringProtocol {
-        self.init(content: content) {
-            Text(title)
+    private func navigationLink<V: View>(_ title: String, content: () -> V) -> some View {
+        NavigationLink(title) {
+            content()
+            #if os(iOS)
+                .navigationBarTitleDisplayMode(.inline)
+            #endif
         }
     }
 }
