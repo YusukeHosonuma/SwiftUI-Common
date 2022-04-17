@@ -12,44 +12,52 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("WebView") {
-                    SampleWebView()
-                    #if os(iOS)
-                        .navigationBarTitleDisplayMode(.inline)
-                    #endif
+                Section("Bridge") {
+                    navigationLink("WebView") {
+                        SampleWebView()
+                    }
                 }
-                NavigationLink("SliderValue") {
-                    SliderView()
-                    #if os(iOS)
-                        .navigationBarTitleDisplayMode(.inline)
-                    #endif
+
+                Section("Binding") {
+                    navigationLink("Binding<T> to Binding<T?>") {
+                        BindingOptionalView()
+                    }
                 }
-                NavigationLink("Binding<T> to Binding<T?>") {
-                    BindingOptionalView()
-                    #if os(iOS)
-                        .navigationBarTitleDisplayMode(.inline)
-                    #endif
+
+                Section("View+") {
+                    navigationLink(".when(<condition>)") {
+                        WhenView()
+                    }
+                    navigationLink(".whenLet(<optional-value>)") {
+                        WhenLetView()
+                    }
+                    navigationLink(".border(.red, width: 1, edge: .top)") {
+                        BorderSampleView()
+                    }
                 }
-                NavigationLink(".when(<condition>)") {
-                    WhenView()
-                    #if os(iOS)
-                        .navigationBarTitleDisplayMode(.inline)
-                    #endif
+
+                Section("Misc") {
+                    navigationLink("SliderValue") {
+                        SliderView()
+                    }
                 }
-                NavigationLink(".whenLet(<optional-value>)") {
-                    WhenLetView()
-                    #if os(iOS)
-                        .navigationBarTitleDisplayMode(.inline)
-                    #endif
-                }
-                NavigationLink(".border(.red, width: 1, edge: .top)") {
-                    BorderSampleView()
-                    #if os(iOS)
-                        .navigationBarTitleDisplayMode(.inline)
-                    #endif
+
+                Section("Debug") {
+                    navigationLink(".debug { ... }") {
+                        DebugView()
+                    }
                 }
             }
             .navigationTitle("Example")
+        }
+    }
+
+    private func navigationLink<V: View>(_ title: String, content: () -> V) -> some View {
+        NavigationLink(title) {
+            content()
+            #if os(iOS)
+                .navigationBarTitleDisplayMode(.inline)
+            #endif
         }
     }
 }
