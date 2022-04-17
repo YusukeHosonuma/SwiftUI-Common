@@ -57,7 +57,7 @@ public struct WebView: Representable {
 }
 
 public final class WebViewState: ObservableObject {
-    public typealias Configure = (WKWebView) -> ()
+    public typealias Configure = (WKWebView) -> Void
 
     @Published public var isFirstLoading = true
     @Published public var isLoading = true
@@ -78,23 +78,23 @@ public final class WebViewState: ObservableObject {
     public func goForward() {
         webView?.goForward()
     }
-    
+
     fileprivate func configure(webView: WKWebView) {
         configureWKWebView?(webView)
         self.webView = webView
     }
-    
+
     fileprivate func didStartProvisionalNavigation() {
         isLoading = true
         updateButtons()
     }
-    
+
     fileprivate func didFinish() {
         isFirstLoading = false
         isLoading = false
         updateButtons()
     }
-    
+
     private func updateButtons() {
         guard let webView = webView else { return }
         canGoBack = webView.canGoBack
@@ -111,15 +111,15 @@ public class WebViewCoordinator: NSObject, WKNavigationDelegate {
 
     // MARK: WKNavigationDelegate
 
-    public func webView(_ webView: WKWebView, didStartProvisionalNavigation _: WKNavigation!) {
+    public func webView(_: WKWebView, didStartProvisionalNavigation _: WKNavigation!) {
         state.didStartProvisionalNavigation()
     }
 
-    public func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
+    public func webView(_: WKWebView, didFinish _: WKNavigation!) {
         state.didFinish()
     }
-    
-    public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+
+    public func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
         state.didFinish()
     }
 }

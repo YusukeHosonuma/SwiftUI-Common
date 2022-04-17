@@ -26,7 +26,7 @@ public struct ActivityView: UIViewControllerRepresentable {
 
 struct ActivityView_Previews: PreviewProvider {
     @State static var isPresent = false
-    
+
     static var previews: some View {
         Image(systemName: "square.and.arrow.up")
             .sheet(isPresented: .constant(true)) {

@@ -47,7 +47,7 @@ struct ContentView: View {
                     #if os(iOS)
                         .navigationBarTitleDisplayMode(.inline)
                     #endif
-                }                
+                }
             }
             .navigationTitle("Example")
         }

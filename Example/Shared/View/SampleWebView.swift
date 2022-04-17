@@ -11,15 +11,15 @@ import SwiftUICommon
 private let url = URL(string: "https://github.com/YusukeHosonuma/Swift-Evolution-Browser")!
 
 struct SampleWebView: View {
-    @StateObject var webViewState = WebViewState { webView in
+    @StateObject var webViewState = WebViewState { _ in
         // 💡 If you want to more configuration
         // webView.allowsBackForwardNavigationGestures = true
     }
-    
+
     var body: some View {
         ZStack {
             WebView(url: url, state: webViewState)
-            
+
             if webViewState.isFirstLoading {
                 ProgressView()
             }
@@ -48,7 +48,7 @@ struct SampleWebView: View {
             }
         }
     }
-    
+
     var toolbarPlacement: ToolbarItemPlacement {
         #if os(macOS)
             .automatic
