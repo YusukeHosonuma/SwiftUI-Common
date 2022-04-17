@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Yusuke Hosonuma on 2022/04/11.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WhenView: View {
     @State var condition = false
-    
+
     var body: some View {
         VStack {
             Text("Hello")

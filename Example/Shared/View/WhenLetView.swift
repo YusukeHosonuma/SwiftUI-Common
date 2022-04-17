@@ -26,7 +26,7 @@ enum Fruit: String, CaseIterable, Identifiable {
 
 struct WhenLetView: View {
     @State var selection: Fruit? = .apple // 💡 Allow non-selected (nil).
-    
+
     var body: some View {
         VStack {
             Text("Selected fruit color.")

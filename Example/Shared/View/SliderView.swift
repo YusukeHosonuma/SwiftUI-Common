@@ -14,7 +14,7 @@ enum TextSize: Int, CaseIterable {
     case medium = 2
     case large = 3
     case xLarge = 4
-    
+
     var name: String {
         switch self {
         case .xSmall: return "xSmall"
@@ -28,7 +28,7 @@ enum TextSize: Int, CaseIterable {
 
 extension TextSize: SliderValue {
     static let sliderRange: ClosedRange<Double> = 0 ... Double(TextSize.allCases.count - 1)
-    
+
     var sliderIndex: Int { rawValue }
 
     init(fromSliderIndex index: Int) {
@@ -36,10 +36,9 @@ extension TextSize: SliderValue {
     }
 }
 
-
 struct SliderView: View {
     @State var textSize: TextSize = .medium
-    
+
     var body: some View {
         VStack {
             Text("\(textSize.name)")

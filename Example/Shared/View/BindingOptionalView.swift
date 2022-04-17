@@ -15,7 +15,7 @@ enum Menu: Int {
 
 struct BindingOptionalView: View {
     @SceneStorage("selection") var selection: Menu = .all
-    
+
     var body: some View {
         #if os(macOS)
         let optionalSelection = $selection.optionalBinding() // ✅

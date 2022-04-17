@@ -13,7 +13,7 @@ public extension ViewModifier {
         NSApplication.toggleSidebar()
     }
     #endif
-    
+
     #if canImport(UIKit)
     func hideKeyboard() {
         UIApplication.hideKeyboard()
