@@ -31,6 +31,7 @@ Since this is an **experimental library**, we recommend that you copy (or use as
     - `hideKeyboard()`
     - `when(<condition>) { view in ... }`
     - `whenLet(<optional-value>) { view, value in ... }` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/6))
+    - `debug { ... }` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/8))
   - [ViewModifier](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/ViewModifier%2B.swift)
     - `toggleSidebar()`
     - `hideKeyboard()`
