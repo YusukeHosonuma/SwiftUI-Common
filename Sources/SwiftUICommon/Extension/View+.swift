@@ -37,4 +37,9 @@ public extension View {
             self
         }
     }
+
+    func debug(_ handler: () -> Void) -> Self {
+        handler()
+        return self
+    }
 }

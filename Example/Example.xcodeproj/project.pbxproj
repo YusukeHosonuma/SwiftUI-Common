@@ -11,6 +11,8 @@
 		701CAB62280428DE00A2D597 /* WhenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CAB60280428DE00A2D597 /* WhenView.swift */; };
 		701E6B8E280BBD9000B026C7 /* WhenLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E6B8D280BBD9000B026C7 /* WhenLetView.swift */; };
 		701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E6B8D280BBD9000B026C7 /* WhenLetView.swift */; };
+		7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042255D280BDAAB00B9F336 /* DebugView.swift */; };
+		7042255F280BDAAB00B9F336 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042255D280BDAAB00B9F336 /* DebugView.swift */; };
 		70914AA02803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70914AA12803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70914AA32803FC8800358A9C /* BindingOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914AA22803FC8800358A9C /* BindingOptionalView.swift */; };
@@ -32,6 +34,7 @@
 /* Begin PBXFileReference section */
 		701CAB60280428DE00A2D597 /* WhenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenView.swift; sourceTree = "<group>"; };
 		701E6B8D280BBD9000B026C7 /* WhenLetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenLetView.swift; sourceTree = "<group>"; };
+		7042255D280BDAAB00B9F336 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		70914A9F2803F88200358A9C /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		70914AA22803FC8800358A9C /* BindingOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingOptionalView.swift; sourceTree = "<group>"; };
 		70AE25C8280947F900A9E517 /* BorderSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderSampleView.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				70E35F7127FBE71B00483D24 /* SampleWebView.swift */,
+				7042255D280BDAAB00B9F336 /* DebugView.swift */,
 				70914A9F2803F88200358A9C /* SliderView.swift */,
 				701CAB60280428DE00A2D597 /* WhenView.swift */,
 				701E6B8D280BBD9000B026C7 /* WhenLetView.swift */,
@@ -236,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */,
 				701CAB61280428DE00A2D597 /* WhenView.swift in Sources */,
 				70AE25C9280947F900A9E517 /* BorderSampleView.swift in Sources */,
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
@@ -251,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7042255F280BDAAB00B9F336 /* DebugView.swift in Sources */,
 				701CAB62280428DE00A2D597 /* WhenView.swift in Sources */,
 				70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */,
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
