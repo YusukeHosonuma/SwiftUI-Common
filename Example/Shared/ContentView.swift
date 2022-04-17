@@ -36,12 +36,18 @@ struct ContentView: View {
                         .navigationBarTitleDisplayMode(.inline)
                     #endif
                 }
+                NavigationLink(".whenLet(<optional-value>)") {
+                    WhenLetView()
+                    #if os(iOS)
+                        .navigationBarTitleDisplayMode(.inline)
+                    #endif
+                }
                 NavigationLink(".border(.red, width: 1, edge: .top)") {
                     BorderSampleView()
                     #if os(iOS)
                         .navigationBarTitleDisplayMode(.inline)
                     #endif
-                }
+                }                
             }
             .navigationTitle("Example")
         }

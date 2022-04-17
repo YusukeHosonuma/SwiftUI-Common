@@ -28,4 +28,13 @@ public extension View {
             self
         }
     }
+
+    @ViewBuilder
+    func whenLet<V, Content: View>(_ optional: V?, @ViewBuilder transform: (Self, V) -> Content) -> some View {
+        if let value = optional {
+            transform(self, value)
+        } else {
+            self
+        }
+    }
 }
