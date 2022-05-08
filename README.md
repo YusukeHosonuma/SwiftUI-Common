@@ -29,6 +29,7 @@ Since this is an **experimental library**, we recommend that you copy (or use as
   - [View](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2B.swift)
     - `toggleSidebar()`
     - `hideKeyboard()`
+    - `extend { view in ...}` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/10))
     - `when(<condition>) { view in ... }`
     - `whenLet(<optional-value>) { view, value in ... }` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/6))
     - `debug { ... }` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/8))
