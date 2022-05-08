@@ -20,6 +20,18 @@ public extension View {
     }
     #endif
 
+    //
+    // MARK: For readability.
+    //
+    
+    func enabled(_ enabled: Bool) -> some View {
+        disabled(enabled == false)
+    }
+    
+    //
+    // MARK: Add Modifier according to condition.
+    //
+    
     func extend<Content: View>(@ViewBuilder transform: (Self) -> Content) -> some View {
         transform(self)
     }
@@ -41,7 +53,40 @@ public extension View {
             self
         }
     }
+    
+    //
+    // MARK: Decoration
+    //
 
+    func border(_ color: Color, width: CGFloat = 1, edge: Edge.Set) -> some View {
+        overlay(
+            VStack(spacing: 0) {
+                if edge == .all || edge == .vertical || edge == .top {
+                    color.frame(height: width)
+                }
+                Spacer()
+                if edge == .all || edge == .vertical || edge == .bottom {
+                    color.frame(height: width)
+                }
+            }
+        )
+        .overlay(
+            HStack(spacing: 0) {
+                if edge == .all || edge == .horizontal || edge == .leading {
+                    color.frame(width: width)
+                }
+                Spacer()
+                if edge == .all || edge == .horizontal || edge == .trailing {
+                    color.frame(width: width)
+                }
+            }
+        )
+    }
+    
+    //
+    // MARK: For debug.
+    //
+    
     func debug(_ handler: () -> Void) -> Self {
         handler()
         return self
