@@ -22,6 +22,9 @@ struct ContentView: View {
                     navigationLink("Binding<T> to Binding<T?>") {
                         BindingOptionalView()
                     }
+                    navigationLink("Binding<T?> -> Binding<T>?") {
+                        WrappedBindingView()
+                    }
                 }
 
                 Section("View+") {
