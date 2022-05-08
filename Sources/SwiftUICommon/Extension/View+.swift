@@ -20,6 +20,10 @@ public extension View {
     }
     #endif
 
+    func extend<Content: View>(@ViewBuilder transform: (Self) -> Content) -> some View {
+        transform(self)
+    }
+    
     @ViewBuilder
     func when<Content: View>(_ condition: Bool, @ViewBuilder transform: (Self) -> Content) -> some View {
         if condition {
