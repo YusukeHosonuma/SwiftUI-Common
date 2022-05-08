@@ -25,10 +25,22 @@ struct ContentView: View {
                 }
 
                 Section("View+") {
-                    navigationLink(".when(<condition>)") {
+                    navigationLink(".extend { ... }") {
+                        Text("Hello")
+                            .extend { content in
+                                if #available(iOS 15, *) {
+                                    // 💡 `dynamicTypeSize` is supports on iOS 15+
+                                    content
+                                        .environment(\.dynamicTypeSize, .xxxLarge)
+                                } else {
+                                    content
+                                }
+                            }
+                    }
+                    navigationLink(".when(<condition) { ... }") {
                         WhenView()
                     }
-                    navigationLink(".whenLet(<optional-value>)") {
+                    navigationLink(".whenLet(<optional>) { ... }") {
                         WhenLetView()
                     }
                     navigationLink(".border(.red, width: 1, edge: .top)") {
@@ -48,6 +60,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .font(.system(size: 12, weight: .regular, design: .monospaced))
             .navigationTitle("Example")
         }
     }
