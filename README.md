@@ -38,8 +38,8 @@ Nothing currently.
     - `toggleSidebar()`
     - `hideKeyboard()`
   - [Binding](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Binding%2B.swift)
-    - `optionalBinding()` (`Binding<T>` -> `Binding<T?>`) ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/13))
-    - `wrappedBinding()` (`Binding<T?>` -> `Binding<T>?`)
+    - `optionalBinding()` (`Binding<T>` -> `Binding<T?>`)
+    - `wrappedBinding()` (`Binding<T?>` -> `Binding<T>?`) ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/13))
     - `sliderBinding() -> Binding<Double> where Value: SliderValue`
 - AppKit
   - [NSApplication](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/AppKit/NSApplication%2B.swift)
