@@ -25,6 +25,9 @@ struct ContentView: View {
                 }
 
                 Section("View+") {
+                    navigationLink(".enabled(<condition>)") {
+                        EnabledView()
+                    }
                     navigationLink(".extend { ... }") {
                         Text("Hello")
                             .extend { content in
