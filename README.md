@@ -16,8 +16,7 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 ## Modifier
 
-- [`.enabled(_ condition: Bool)`](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Modifier/EnabledModifier.swift)
-- [`.border(_ color: Color, width: CGFloat = 1, edge: Edge.Set)`](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Modifier/BorderModifier.swift) ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/5))
+Nothing currently.
 
 ## Protocol
 
@@ -29,9 +28,11 @@ Since this is an **experimental library**, we recommend that you copy (or use as
   - [View](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2B.swift)
     - `toggleSidebar()`
     - `hideKeyboard()`
+    - `enabled(_ condition: Bool)`
     - `extend { view in ...}` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/10))
     - `when(<condition>) { view in ... }`
     - `whenLet(<optional-value>) { view, value in ... }` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/6))
+    - `border(_ color: Color, width: CGFloat = 1, edge: Edge.Set)` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/5))
     - `debug { ... }` ([PR](https://github.com/YusukeHosonuma/SwiftUI-Common/pull/8))
   - [ViewModifier](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/ViewModifier%2B.swift)
     - `toggleSidebar()`
