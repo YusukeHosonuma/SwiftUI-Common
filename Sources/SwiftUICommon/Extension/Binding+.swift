@@ -21,6 +21,9 @@ public extension Binding where Value: SliderValue {
 }
 
 public extension Binding {
+    //
+    // `Binding<T>` -> `Binding<T?>`
+    //
     func optionalBinding() -> Binding<Value?> {
         .init(
             get: { self.wrappedValue },
@@ -30,5 +33,19 @@ public extension Binding {
                 }
             }
         )
+    }
+
+    //
+    // `Binding<T?>` -> `Binding<T>?`
+    //
+    func wrappedBinding<Wrapped>() -> Binding<Wrapped>? where Value == Wrapped? {
+        if let value = wrappedValue {
+            return .init(
+                get: { value },
+                set: { self.wrappedValue = $0 }
+            )
+        } else {
+            return nil
+        }
     }
 }

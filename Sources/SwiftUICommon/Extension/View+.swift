@@ -21,21 +21,25 @@ public extension View {
     #endif
 
     //
+
     // MARK: For readability.
+
     //
-    
+
     func enabled(_ enabled: Bool) -> some View {
         disabled(enabled == false)
     }
-    
+
     //
+
     // MARK: Add Modifier according to condition.
+
     //
-    
+
     func extend<Content: View>(@ViewBuilder transform: (Self) -> Content) -> some View {
         transform(self)
     }
-    
+
     @ViewBuilder
     func when<Content: View>(_ condition: Bool, @ViewBuilder transform: (Self) -> Content) -> some View {
         if condition {
@@ -53,9 +57,11 @@ public extension View {
             self
         }
     }
-    
+
     //
+
     // MARK: Decoration
+
     //
 
     func border(_ color: Color, width: CGFloat = 1, edge: Edge.Set) -> some View {
@@ -82,11 +88,13 @@ public extension View {
             }
         )
     }
-    
+
     //
+
     // MARK: For debug.
+
     //
-    
+
     func debug(_ handler: () -> Void) -> Self {
         handler()
         return self

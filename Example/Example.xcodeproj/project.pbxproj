@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		700EA9352827B018005191A1 /* EnabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9342827B018005191A1 /* EnabledView.swift */; };
 		700EA9362827B018005191A1 /* EnabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9342827B018005191A1 /* EnabledView.swift */; };
+		700EA9392827B3A5005191A1 /* WrappedBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9382827B3A5005191A1 /* WrappedBindingView.swift */; };
+		700EA93A2827B3A5005191A1 /* WrappedBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9382827B3A5005191A1 /* WrappedBindingView.swift */; };
 		701CAB61280428DE00A2D597 /* WhenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CAB60280428DE00A2D597 /* WhenView.swift */; };
 		701CAB62280428DE00A2D597 /* WhenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CAB60280428DE00A2D597 /* WhenView.swift */; };
 		701E6B8E280BBD9000B026C7 /* WhenLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E6B8D280BBD9000B026C7 /* WhenLetView.swift */; };
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		700EA9342827B018005191A1 /* EnabledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledView.swift; sourceTree = "<group>"; };
+		700EA9382827B3A5005191A1 /* WrappedBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedBindingView.swift; sourceTree = "<group>"; };
 		701CAB60280428DE00A2D597 /* WhenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenView.swift; sourceTree = "<group>"; };
 		701E6B8D280BBD9000B026C7 /* WhenLetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenLetView.swift; sourceTree = "<group>"; };
 		7042255D280BDAAB00B9F336 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
@@ -74,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700EA9372827B38D005191A1 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				70914A9F2803F88200358A9C /* SliderView.swift */,
+				70914AA22803FC8800358A9C /* BindingOptionalView.swift */,
+				700EA9382827B3A5005191A1 /* WrappedBindingView.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
 		70422560280BDF6200B9F336 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,13 +153,12 @@
 		70E35F7427FBECEE00483D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				700EA9372827B38D005191A1 /* Binding */,
 				70E35F7127FBE71B00483D24 /* SampleWebView.swift */,
 				7042255D280BDAAB00B9F336 /* DebugView.swift */,
-				70914A9F2803F88200358A9C /* SliderView.swift */,
 				701CAB60280428DE00A2D597 /* WhenView.swift */,
 				700EA9342827B018005191A1 /* EnabledView.swift */,
 				701E6B8D280BBD9000B026C7 /* WhenLetView.swift */,
-				70914AA22803FC8800358A9C /* BindingOptionalView.swift */,
 				70AE25C8280947F900A9E517 /* BorderSampleView.swift */,
 			);
 			path = View;
@@ -256,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700EA9392827B3A5005191A1 /* WrappedBindingView.swift in Sources */,
 				7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */,
 				701CAB61280428DE00A2D597 /* WhenView.swift in Sources */,
 				70AE25C9280947F900A9E517 /* BorderSampleView.swift in Sources */,
@@ -274,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700EA93A2827B3A5005191A1 /* WrappedBindingView.swift in Sources */,
 				7042255F280BDAAB00B9F336 /* DebugView.swift in Sources */,
 				701CAB62280428DE00A2D597 /* WhenView.swift in Sources */,
 				70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */,

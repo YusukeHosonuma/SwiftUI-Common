@@ -15,7 +15,7 @@ struct EnabledView: View {
             // ✅ Readable
             Button("Hello") {}
                 .enabled(isEnabled)
-            
+
             // 😕 Not readable.
             Button("Hello") {}
                 .disabled(isEnabled == false)
