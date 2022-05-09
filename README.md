@@ -6,10 +6,6 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 ## Control
 
-
-
-
-
 <details>
 <summary>TextEdit</summary>
 
@@ -318,7 +314,41 @@ struct SliderView: View {
 
 <img width="333" alt="image" src="https://user-images.githubusercontent.com/2990285/167333536-031af3f8-86ce-46bd-81e4-6dc63f51eb2c.png">
 </details>
+    
+## Image extensions
 
+[Image+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Image%2B.swift)
+
+<details>
+<summary>init(UIImage or NSImage)</summary>
+
+```swift
+#if os(macOS)
+private typealias XImage = NSImage
+#else
+private typealias XImage = UIImage
+#endif
+
+struct ImageView: View {
+    var body: some View {
+        Image(image: renderImage()) // 💡
+            .resizable()
+            .scaledToFit()
+    }
+
+    private func renderImage() -> XImage {
+        // ⚠️ Assumes rendering code
+        #if os(macOS)
+        NSImage(named: "picture")!
+        #else
+        UIImage(named: "picture")!
+        #endif
+    }
+}
+```
+</details>
+
+    
 ## Concurrency extensions
   
 [Task+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Task%2B.swift)
