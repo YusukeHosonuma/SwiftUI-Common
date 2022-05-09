@@ -6,14 +6,15 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 ## Control
 
-[TextEdit.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/TextEdit.swift) (add placeholder to [TextEditor](https://developer.apple.com/documentation/swiftui/texteditor))<br>
-[WebView.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/WebView.swift) (bridge to [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview))<br>
-[ActivityView](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/UIKit/ActivityView.swift) (bridge to [UIActivityViewController](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller))<br>
-[WindowController](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/AppKit/WindowController.swift) (bridge to [NSWindowController](https://developer.apple.com/documentation/appkit/nswindowcontroller))<br>
+
+
+
 
 <details>
 <summary>TextEdit</summary>
-  
+
+[TextEdit.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/TextEdit.swift) (add placeholder to [TextEditor](https://developer.apple.com/documentation/swiftui/texteditor))
+
 ```swift
 TextEdit("Please paste.", text: $text, font: .custom("SF Mono", size: 16))
 ```
@@ -22,7 +23,9 @@ TextEdit("Please paste.", text: $text, font: .custom("SF Mono", size: 16))
 
 <details>
 <summary>WebView</summary>
-  
+
+[WebView.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/WebView.swift) (bridge to [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview))
+
 ```swift
 @StateObject var webViewState = WebViewState { _ in
     // 💡 If you want to more configuration
@@ -72,7 +75,9 @@ var body: some View {
 
 <details>
 <summary>ActivityView</summary>
-  
+
+[ActivityView](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/UIKit/ActivityView.swift) (bridge to [UIActivityViewController](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller))
+
 ```swift
 @State static var isPresent = false
 
@@ -88,7 +93,8 @@ static var previews: some View {
 
 <details>
 <summary>WindowController</summary>
-  
+
+[WindowController](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/AppKit/WindowController.swift) (bridge to [NSWindowController](https://developer.apple.com/documentation/appkit/nswindowcontroller))<br>
 T.B.D
 </details>
 
