@@ -65,6 +65,12 @@ struct ContentView: View {
                         DebugView()
                     }
                 }
+                
+                Section("Other") {
+                    navigationLink("Image+") {
+                        ImageView()
+                    }
+                }
             }
             .font(.system(size: 12, weight: .regular, design: .monospaced))
             .navigationTitle("Example")
