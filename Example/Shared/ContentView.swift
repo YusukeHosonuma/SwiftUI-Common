@@ -37,7 +37,9 @@ struct ContentView: View {
                                 if #available(iOS 15, *) {
                                     // 💡 `dynamicTypeSize` is supports on iOS 15+
                                     content
+                                        #if os(iOS)
                                         .environment(\.dynamicTypeSize, .xxxLarge)
+                                        #endif
                                 } else {
                                     content
                                 }
@@ -63,6 +65,12 @@ struct ContentView: View {
                 Section("Debug") {
                     navigationLink(".debug { ... }") {
                         DebugView()
+                    }
+                }
+                
+                Section("Other") {
+                    navigationLink("Image+") {
+                        ImageView()
                     }
                 }
             }
