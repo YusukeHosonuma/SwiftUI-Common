@@ -40,6 +40,8 @@
 		70FD8DBC282B309E00E490F0 /* CaseBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */; };
 		70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */; };
 		70FD8DC0282B315700E490F0 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 70FD8DBF282B315700E490F0 /* CasePaths */; };
+		70FD8DC2282B363400E490F0 /* BindingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD8DC1282B363400E490F0 /* BindingMapView.swift */; };
+		70FD8DC3282B363400E490F0 /* BindingMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD8DC1282B363400E490F0 /* BindingMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,7 @@
 		70E35F6B27FBDF2400483D24 /* SwiftUICommon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUICommon; path = ..; sourceTree = "<group>"; };
 		70E35F7127FBE71B00483D24 /* SampleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWebView.swift; sourceTree = "<group>"; };
 		70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseBindingView.swift; sourceTree = "<group>"; };
+		70FD8DC1282B363400E490F0 /* BindingMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,7 @@
 				70914AA22803FC8800358A9C /* BindingOptionalView.swift */,
 				700EA9382827B3A5005191A1 /* WrappedBindingView.swift */,
 				70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */,
+				70FD8DC1282B363400E490F0 /* BindingMapView.swift */,
 			);
 			path = Binding;
 			sourceTree = "<group>";
@@ -290,6 +294,7 @@
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBC282B309E00E490F0 /* CaseBindingView.swift in Sources */,
 				70422562280BDF7E00B9F336 /* Section+UpperCompatible.swift in Sources */,
+				70FD8DC2282B363400E490F0 /* BindingMapView.swift in Sources */,
 				70914AA02803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8E280BBD9000B026C7 /* WhenLetView.swift in Sources */,
 				700EA9352827B018005191A1 /* EnabledView.swift in Sources */,
@@ -311,6 +316,7 @@
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */,
 				70422563280BE31100B9F336 /* Section+UpperCompatible.swift in Sources */,
+				70FD8DC3282B363400E490F0 /* BindingMapView.swift in Sources */,
 				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */,
 				700EA9362827B018005191A1 /* EnabledView.swift in Sources */,
