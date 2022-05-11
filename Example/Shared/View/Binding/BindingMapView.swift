@@ -14,7 +14,9 @@ struct BindingMapView: View {
         VStack {
             TextField("isOn", text: $boolString)
                 .textFieldStyle(.roundedBorder)
+            #if os(iOS)
                 .autocapitalization(.none)
+            #endif
 
             //
             // 💡 Can edit `String` as `Bool`.

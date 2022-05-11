@@ -8,7 +8,7 @@
 #if canImport(AppKit)
 import AppKit
 
-public extension NSApplication {
+extension NSApplication {
     static func toggleSidebar() {
         // ref: https://sarunw.com/posts/how-to-toggle-sidebar-in-macos/
         NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)

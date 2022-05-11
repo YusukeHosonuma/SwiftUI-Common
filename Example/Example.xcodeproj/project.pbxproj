@@ -26,6 +26,7 @@
 		70AE25C9280947F900A9E517 /* BorderSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE25C8280947F900A9E517 /* BorderSampleView.swift */; };
 		70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE25C8280947F900A9E517 /* BorderSampleView.swift */; };
 		70DEEA39282B62E9009E7121 /* SheetDismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEEA38282B62E9009E7121 /* SheetDismissView.swift */; };
+		70DEEA3A282B7149009E7121 /* SheetDismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEEA38282B62E9009E7121 /* SheetDismissView.swift */; };
 		70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4927FBDC3F00483D24 /* ExampleApp.swift */; };
 		70E35F5A27FBDC4000483D24 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4927FBDC3F00483D24 /* ExampleApp.swift */; };
 		70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4A27FBDC3F00483D24 /* ContentView.swift */; };
@@ -311,6 +312,7 @@
 				7042255F280BDAAB00B9F336 /* DebugView.swift in Sources */,
 				701CAB62280428DE00A2D597 /* WhenView.swift in Sources */,
 				70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */,
+				70DEEA3A282B7149009E7121 /* SheetDismissView.swift in Sources */,
 				702286522828D54E002673FF /* ImageView.swift in Sources */,
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */,
