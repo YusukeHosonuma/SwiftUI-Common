@@ -19,6 +19,9 @@ struct ContentView: View {
                 }
 
                 Section("Binding") {
+                    navigationLink("Binding<T> to Binding<R> (map)") {
+                        BindingMapView()
+                    }
                     navigationLink("Binding<T> to Binding<T?>") {
                         BindingOptionalView()
                     }

@@ -23,6 +23,33 @@ public extension Binding where Value: SliderValue {
 
 public extension Binding {
     //
+    // `Binding<Value>` -> `Binding<NewValue>`
+    //
+    func map<NewValue>(get: @escaping (Value) -> NewValue, set: @escaping (NewValue) -> Value) -> Binding<NewValue> {
+        .init(
+            get: { get(wrappedValue) },
+            set: { wrappedValue = set($0) }
+        )
+    }
+
+    //
+    // 🌱 Experimental.
+    //
+    // `Binding<Value>` -> `Binding<NewValue>` (`set` can be return `nil`)
+    //
+    // func map<NewValue>(get: @escaping (Value) -> NewValue, set: @escaping (NewValue) -> Value?) -> Binding<NewValue> {
+    //     .init(
+    //         get: { get(wrappedValue) },
+    //         set: {
+    //             if let value = set($0) {
+    //                 wrappedValue = value
+    //             }
+    //         }
+    //     )
+    // }
+    //
+
+    //
     // `Binding<T>` -> `Binding<T?>`
     //
     func optionalBinding() -> Binding<Value?> {
@@ -43,7 +70,7 @@ public extension Binding {
         if let value = wrappedValue {
             return .init(
                 get: { value },
-                set: { self.wrappedValue = $0 }
+                set: { wrappedValue = $0 }
             )
         } else {
             return nil
