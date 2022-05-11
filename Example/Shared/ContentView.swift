@@ -68,6 +68,12 @@ struct ContentView: View {
                     }
                 }
 
+                Section("Compatible") {
+                    navigationLink("Dismiss") {
+                        SheetDismissView()
+                    }
+                }
+
                 Section("Debug") {
                     navigationLink(".debug { ... }") {
                         DebugView()
