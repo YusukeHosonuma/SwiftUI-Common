@@ -19,14 +19,13 @@
 		702286522828D54E002673FF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702286502828D54E002673FF /* ImageView.swift */; };
 		7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042255D280BDAAB00B9F336 /* DebugView.swift */; };
 		7042255F280BDAAB00B9F336 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042255D280BDAAB00B9F336 /* DebugView.swift */; };
-		70422562280BDF7E00B9F336 /* Section+UpperCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70422561280BDF7E00B9F336 /* Section+UpperCompatible.swift */; };
-		70422563280BE31100B9F336 /* Section+UpperCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70422561280BDF7E00B9F336 /* Section+UpperCompatible.swift */; };
 		70914AA02803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70914AA12803F88200358A9C /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914A9F2803F88200358A9C /* SliderView.swift */; };
 		70914AA32803FC8800358A9C /* BindingOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914AA22803FC8800358A9C /* BindingOptionalView.swift */; };
 		70914AA42803FC8800358A9C /* BindingOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70914AA22803FC8800358A9C /* BindingOptionalView.swift */; };
 		70AE25C9280947F900A9E517 /* BorderSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE25C8280947F900A9E517 /* BorderSampleView.swift */; };
 		70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE25C8280947F900A9E517 /* BorderSampleView.swift */; };
+		70DEEA39282B62E9009E7121 /* SheetDismissView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DEEA38282B62E9009E7121 /* SheetDismissView.swift */; };
 		70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4927FBDC3F00483D24 /* ExampleApp.swift */; };
 		70E35F5A27FBDC4000483D24 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4927FBDC3F00483D24 /* ExampleApp.swift */; };
 		70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F4A27FBDC3F00483D24 /* ContentView.swift */; };
@@ -51,10 +50,10 @@
 		701E6B8D280BBD9000B026C7 /* WhenLetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenLetView.swift; sourceTree = "<group>"; };
 		702286502828D54E002673FF /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		7042255D280BDAAB00B9F336 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
-		70422561280BDF7E00B9F336 /* Section+UpperCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Section+UpperCompatible.swift"; sourceTree = "<group>"; };
 		70914A9F2803F88200358A9C /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		70914AA22803FC8800358A9C /* BindingOptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingOptionalView.swift; sourceTree = "<group>"; };
 		70AE25C8280947F900A9E517 /* BorderSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderSampleView.swift; sourceTree = "<group>"; };
+		70DEEA38282B62E9009E7121 /* SheetDismissView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDismissView.swift; sourceTree = "<group>"; };
 		70E35F4927FBDC3F00483D24 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		70E35F4A27FBDC3F00483D24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70E35F4B27FBDC4000483D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,12 +99,12 @@
 			path = Binding;
 			sourceTree = "<group>";
 		};
-		70422560280BDF6200B9F336 /* Extension */ = {
+		70DEEA37282B62DB009E7121 /* Compatible */ = {
 			isa = PBXGroup;
 			children = (
-				70422561280BDF7E00B9F336 /* Section+UpperCompatible.swift */,
+				70DEEA38282B62E9009E7121 /* SheetDismissView.swift */,
 			);
-			path = Extension;
+			path = Compatible;
 			sourceTree = "<group>";
 		};
 		70E35F4327FBDC3F00483D24 = {
@@ -122,7 +121,6 @@
 		70E35F4827FBDC3F00483D24 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				70422560280BDF6200B9F336 /* Extension */,
 				70E35F7427FBECEE00483D24 /* View */,
 				70E35F4927FBDC3F00483D24 /* ExampleApp.swift */,
 				70E35F4A27FBDC3F00483D24 /* ContentView.swift */,
@@ -166,6 +164,7 @@
 		70E35F7427FBECEE00483D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70DEEA37282B62DB009E7121 /* Compatible */,
 				700EA9372827B38D005191A1 /* Binding */,
 				70E35F7127FBE71B00483D24 /* SampleWebView.swift */,
 				7042255D280BDAAB00B9F336 /* DebugView.swift */,
@@ -288,12 +287,12 @@
 			files = (
 				700EA9392827B3A5005191A1 /* WrappedBindingView.swift in Sources */,
 				7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */,
+				70DEEA39282B62E9009E7121 /* SheetDismissView.swift in Sources */,
 				701CAB61280428DE00A2D597 /* WhenView.swift in Sources */,
 				70AE25C9280947F900A9E517 /* BorderSampleView.swift in Sources */,
 				702286512828D54E002673FF /* ImageView.swift in Sources */,
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBC282B309E00E490F0 /* CaseBindingView.swift in Sources */,
-				70422562280BDF7E00B9F336 /* Section+UpperCompatible.swift in Sources */,
 				70FD8DC2282B363400E490F0 /* BindingMapView.swift in Sources */,
 				70914AA02803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8E280BBD9000B026C7 /* WhenLetView.swift in Sources */,
@@ -315,7 +314,6 @@
 				702286522828D54E002673FF /* ImageView.swift in Sources */,
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */,
-				70422563280BE31100B9F336 /* Section+UpperCompatible.swift in Sources */,
 				70FD8DC3282B363400E490F0 /* BindingMapView.swift in Sources */,
 				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */,
