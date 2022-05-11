@@ -18,7 +18,7 @@ struct BindingOptionalView: View {
 
     var body: some View {
         #if os(macOS)
-        let optionalSelection = $selection.optionalBinding() // ✅
+        let optionalSelection = $selection.optional() // ✅
         NavigationView {
             List {
                 NavigationLink(tag: Menu.all, selection: optionalSelection, destination: { Text("1") }) {

@@ -8,19 +8,6 @@
 import CasePaths
 import SwiftUI
 
-public extension Binding where Value: SliderValue {
-    func sliderBinding() -> Binding<Double> {
-        .init(
-            get: {
-                Double(self.wrappedValue.sliderIndex)
-            },
-            set: {
-                self.wrappedValue = Value(fromSliderIndex: Int($0))
-            }
-        )
-    }
-}
-
 public extension Binding {
     //
     // `Binding<Value>` -> `Binding<NewValue>`
@@ -52,7 +39,7 @@ public extension Binding {
     //
     // `Binding<T>` -> `Binding<T?>`
     //
-    func optionalBinding() -> Binding<Value?> {
+    func optional() -> Binding<Value?> {
         .init(
             get: { self.wrappedValue },
             set: {
@@ -66,7 +53,7 @@ public extension Binding {
     //
     // `Binding<T?>` -> `Binding<T>?`
     //
-    func wrappedBinding<Wrapped>() -> Binding<Wrapped>? where Value == Wrapped? {
+    func wrapped<Wrapped>() -> Binding<Wrapped>? where Value == Wrapped? {
         if let value = wrappedValue {
             return .init(
                 get: { value },
@@ -89,5 +76,18 @@ public extension Binding {
         } else {
             return nil
         }
+    }
+}
+
+public extension Binding where Value: SliderValue {
+    func slider() -> Binding<Double> {
+        .init(
+            get: {
+                Double(self.wrappedValue.sliderIndex)
+            },
+            set: {
+                self.wrappedValue = Value(fromSliderIndex: Int($0))
+            }
+        )
     }
 }
