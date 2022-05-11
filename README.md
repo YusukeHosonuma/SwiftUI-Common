@@ -419,6 +419,47 @@ struct ImageView: View {
 </details>
 
     
+## Compatible iOS 15+ (Can be used in iOS 14+)
+
+[Section+iOS15.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Compatible/Section%2BiOS15.swift)<br>
+[@Dismiss](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Compatible/Dismiss.swift)
+
+<details>
+<summary>Section</summary>
+    
+```swift
+Section("title") {
+    ...
+}
+```
+</details>
+    
+<details>
+<summary>@Dismiss</summary>
+
+```swift
+// ✅ Compatible to `@Environment(\.dismiss) var dismiss` in iOS 15.
+@Dismiss var dismiss
+
+// 💡 in iOS 14+
+// @Environment(\.presentationMode) private var presentationMode
+
+var body: some View {
+    VStack {
+        Button("Close") {
+            // ✅ Same as `@Environment(\.dismiss)`
+            dismiss()
+
+            // 💡 in iOS 14
+            // presentationMode.wrappedValue.dismiss()
+        }
+    }
+    .padding()
+}
+```
+</details>
+
+
 ## Concurrency extensions
   
 [Task+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Task%2B.swift)
