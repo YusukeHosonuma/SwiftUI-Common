@@ -17,9 +17,9 @@ struct BindingMapView: View {
                 .autocapitalization(.none)
 
             //
-            // 💡 Can edit `String` as `Bool`
+            // 💡 Can edit `String` as `Bool`.
             //
-            Toggle("isOn", isOn: $boolString.map(
+            Toggle("isOn", isOn: $boolString.map( // ✅ `Binding<String>` -> `Binding<Bool>`
                 get: { $0 == "true" },
                 set: { $0 ? "true" : "false" }
             ))
