@@ -464,24 +464,21 @@ var body: some View {
   
 [Task+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Task%2B.swift)
 
+<details>
+<summary>sleep()</summary>
+    
 ```swift
 Task {
     try await Task.sleep(seconds: 1)        // 1 s
     try await Task.sleep(milliseconds: 500) // 500 ms
 }
 ```
+</details>
 
-## Other
-
-- [NSApplication+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/AppKit/NSApplication%2B.swift)
-  - `toggleSidebar()`
-
-- [UIApplication+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/UIKit/UIApplication%2B.swift)
-  - `hideKeyboard()`
-
+    
 ## Install
 
-If you want.
+If you want. (currently not compliant with semantic version)
 
 ```swift
 let package = Package(
