@@ -43,7 +43,7 @@ struct SliderView: View {
         VStack {
             Text("\(textSize.name)")
             Slider(
-                value: $textSize.sliderBinding(),
+                value: $textSize.slider(),
                 in: TextSize.sliderRange,
                 step: 1
             )
