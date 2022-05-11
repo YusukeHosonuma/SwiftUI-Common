@@ -220,7 +220,32 @@ Button("hide") {
 [SliderValue.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/SliderValue.swift) (e.g. for use `enum` in [Slider](https://developer.apple.com/documentation/swiftui/slider))
 
 <details>
-<summary>optionalBinding()</summary>
+<summary>map()</summary>
+    
+```swift
+@State var boolString = "false"
+
+var body: some View {
+    VStack {
+        TextField("isOn", text: $boolString)
+            .textFieldStyle(.roundedBorder)
+            .autocapitalization(.none)
+
+        //
+        // 💡 Can edit `String` as `Bool`.
+        //
+        Toggle("isOn", isOn: $boolString.map( // ✅ `Binding<String>` -> `Binding<Bool>`
+            get: { $0 == "true" },
+            set: { $0 ? "true" : "false" }
+        ))
+    }
+}
+```
+</details>
+
+
+<details>
+<summary>optional()</summary>
 
 ```swift
 enum Menu: Int {
@@ -232,7 +257,7 @@ struct BindingOptionalView: View {
     @SceneStorage("selection") var selection: Menu = .all
 
     var body: some View {
-        let optionalSelection = $selection.optionalBinding() // 💡 `Binding<Menu>` -> `Binding<Menu?`
+        let optionalSelection = $selection.optional() // 💡 `Binding<Menu>` -> `Binding<Menu?`
         NavigationView {
             List {
                 NavigationLink(tag: Menu.all, selection: optionalSelection, destination: { Text("1") }) {
@@ -250,13 +275,13 @@ struct BindingOptionalView: View {
 
   
 <details>
-<summary>wrappedBinding()</summary>
+<summary>wrapped()</summary>
 
 ```swift
 @Binding var optionalString: String?
 
 var body: some View {
-    if let binding = $optionalString.wrappedBinding() { // 💡 `Binding<String?>` -> `Binding<String>?`
+    if let binding = $optionalString.wrapped() { // 💡 `Binding<String?>` -> `Binding<String>?`
         TextField("placeholder", text: binding)
     } else {
         Text("nil")
@@ -265,9 +290,54 @@ var body: some View {
 ```
 </details>
 
+    
+<details>
+<summary>case()</summary>
+    
+```swift
+import CasePaths // ✅ Required `pointfreeco/swift-case-paths`
+import SwiftUI
+
+enum EnumValue {
+    case string(String) // 💡 Has associated-type `String`
+    case bool(Bool)     // 💡 Has associated-type `Bool`
+}
+
+struct CaseBindingView: View {
+    @State var value: EnumValue = .string("Swift")
+
+    var body: some View {
+        VStack {
+            //
+            // 💡 Note: `switch` statement is only for completeness check by compiler.
+            // (Removal does not affect the operation)
+            //
+            switch value {
+            case .string:
+                //
+                // ✅ Binding<Value> -> Binding<String>?
+                //
+                if let binding = $value.case(/EnumValue.string) {
+                    TextField("placeholder", text: binding)
+                }
+
+            case .bool:
+                //
+                // ✅ Binding<Value> -> Binding<Int>?
+                //
+                if let binding = $value.case(/EnumValue.bool) {
+                    Toggle("isOn", isOn: binding)
+                }
+            }
+        }
+    }
+}
+```
+</details>
+
 
 <details>
-<summary>sliderBinding()</summary>
+<summary>slider()</summary>
 
 ```swift
 // 💡 Want to edit by slider.
@@ -302,7 +372,7 @@ struct SliderView: View {
         VStack {
             Text("\(textSize.name)")
             Slider(
-                value: $textSize.sliderBinding(), // 💡 `Binding<TextSize>` -> `Binding<Double>`
+                value: $textSize.slider(), // 💡 `Binding<TextSize>` -> `Binding<Double>`
                 in: TextSize.sliderRange,
                 step: 1
             )
