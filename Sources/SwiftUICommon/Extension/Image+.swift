@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Yusuke Hosonuma on 2022/05/09.
 //
@@ -13,7 +13,7 @@ public extension Image {
         self = Image(nsImage: image)
     }
     #endif
-    
+
     #if canImport(UIKit)
     init(image: UIImage) {
         self = Image(uiImage: image)

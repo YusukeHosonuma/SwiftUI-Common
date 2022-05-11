@@ -5,8 +5,8 @@
 //  Created by Yusuke Hosonuma on 2022/04/11.
 //
 
-import SwiftUI
 import CasePaths
+import SwiftUI
 
 public extension Binding where Value: SliderValue {
     func sliderBinding() -> Binding<Double> {

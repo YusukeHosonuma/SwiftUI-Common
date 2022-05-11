@@ -5,8 +5,8 @@
 //  Created by Yusuke Hosonuma on 2022/05/11.
 //
 
-import SwiftUI
 import CasePaths
+import SwiftUI
 
 enum EnumValue {
     //
@@ -22,7 +22,7 @@ enum EnumValue {
 
 struct CaseBindingView: View {
     @State var value: EnumValue = .string("Swift")
-    
+
     var body: some View {
         VStack(alignment: .center) {
             //
@@ -30,15 +30,15 @@ struct CaseBindingView: View {
             // (Removal does not affect the operation)
             //
             switch value {
-            case .string(_):
+            case .string:
                 //
                 // ✅ Binding<Value> -> Binding<String>?
                 //
                 if let binding = $value.case(/EnumValue.string) {
                     TextField("placeholder", text: binding)
                 }
-                
-            case .bool(_):
+
+            case .bool:
                 //
                 // ✅ Binding<Value> -> Binding<Int>?
                 //
