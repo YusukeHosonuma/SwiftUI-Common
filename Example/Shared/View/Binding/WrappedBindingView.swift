@@ -26,7 +26,7 @@ private struct OptionalTextEditView: View {
         //
         // ✅ `Binding<String?>` -> `Binding<String>?`
         //
-        if let binding = $optionalString.wrappedBinding() {
+        if let binding = $optionalString.wrapped() {
             TextField("placeholder", text: binding) // 💡 require `Binding<String>`
                 .textFieldStyle(.roundedBorder)
                 .padding(.horizontal)
