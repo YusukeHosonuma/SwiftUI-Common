@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CasePaths
 
 public extension Binding where Value: SliderValue {
     func sliderBinding() -> Binding<Double> {
@@ -43,6 +44,20 @@ public extension Binding {
             return .init(
                 get: { value },
                 set: { self.wrappedValue = $0 }
+            )
+        } else {
+            return nil
+        }
+    }
+
+    //
+    // `Binding<Enum>` -> `Binding<AssociatedValue>?`
+    //
+    func `case`<AssociatedValue>(_ path: CasePath<Value, AssociatedValue>) -> Binding<AssociatedValue>? {
+        if let value = path.extract(from: wrappedValue) {
+            return .init(
+                get: { value },
+                set: { wrappedValue = path.embed($0) }
             )
         } else {
             return nil

@@ -12,8 +12,12 @@ let package = Package(
     products: [
         .library(name: "SwiftUICommon", targets: ["SwiftUICommon"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/pointfreeco/swift-case-paths.git", from: "0.8.0"),
+    ],
     targets: [
-        .target(name: "SwiftUICommon", dependencies: []),
+        .target(name: "SwiftUICommon", dependencies: [
+            .product(name: "CasePaths", package: "swift-case-paths"),
+        ]),
     ]
 )

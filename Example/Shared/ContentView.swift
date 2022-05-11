@@ -25,6 +25,9 @@ struct ContentView: View {
                     navigationLink("Binding<T?> -> Binding<T>?") {
                         WrappedBindingView()
                     }
+                    navigationLink("Binding<Enum> -> Binding<AssociatedType>?") {
+                        CaseBindingView()
+                    }
                 }
 
                 Section("View+") {

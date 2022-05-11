@@ -37,6 +37,9 @@
 		70E35F7027FBDFA200483D24 /* SwiftUICommon in Frameworks */ = {isa = PBXBuildFile; productRef = 70E35F6F27FBDFA200483D24 /* SwiftUICommon */; };
 		70E35F7227FBE71B00483D24 /* SampleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F7127FBE71B00483D24 /* SampleWebView.swift */; };
 		70E35F7327FBE71B00483D24 /* SampleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E35F7127FBE71B00483D24 /* SampleWebView.swift */; };
+		70FD8DBC282B309E00E490F0 /* CaseBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */; };
+		70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */; };
+		70FD8DC0282B315700E490F0 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 70FD8DBF282B315700E490F0 /* CasePaths */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,7 @@
 		70E35F5827FBDC4000483D24 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		70E35F6B27FBDF2400483D24 /* SwiftUICommon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftUICommon; path = ..; sourceTree = "<group>"; };
 		70E35F7127FBE71B00483D24 /* SampleWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleWebView.swift; sourceTree = "<group>"; };
+		70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseBindingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E35F6E27FBDF8F00483D24 /* SwiftUICommon in Frameworks */,
+				70FD8DC0282B315700E490F0 /* CasePaths in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,7 @@
 				70914A9F2803F88200358A9C /* SliderView.swift */,
 				70914AA22803FC8800358A9C /* BindingOptionalView.swift */,
 				700EA9382827B3A5005191A1 /* WrappedBindingView.swift */,
+				70FD8DBB282B309E00E490F0 /* CaseBindingView.swift */,
 			);
 			path = Binding;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			name = "Example (iOS)";
 			packageProductDependencies = (
 				70E35F6D27FBDF8F00483D24 /* SwiftUICommon */,
+				70FD8DBF282B315700E490F0 /* CasePaths */,
 			);
 			productName = "Example (iOS)";
 			productReference = 70E35F5027FBDC4000483D24 /* Example.app */;
@@ -238,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 70E35F4327FBDC3F00483D24;
+			packageReferences = (
+				70FD8DBE282B315700E490F0 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
+			);
 			productRefGroup = 70E35F5127FBDC4000483D24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,6 +288,7 @@
 				70AE25C9280947F900A9E517 /* BorderSampleView.swift in Sources */,
 				702286512828D54E002673FF /* ImageView.swift in Sources */,
 				70E35F5B27FBDC4000483D24 /* ContentView.swift in Sources */,
+				70FD8DBC282B309E00E490F0 /* CaseBindingView.swift in Sources */,
 				70422562280BDF7E00B9F336 /* Section+UpperCompatible.swift in Sources */,
 				70914AA02803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8E280BBD9000B026C7 /* WhenLetView.swift in Sources */,
@@ -298,6 +309,7 @@
 				70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */,
 				702286522828D54E002673FF /* ImageView.swift in Sources */,
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
+				70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */,
 				70422563280BE31100B9F336 /* Section+UpperCompatible.swift in Sources */,
 				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */,
@@ -569,6 +581,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		70FD8DBE282B315700E490F0 /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-case-paths";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		70E35F6D27FBDF8F00483D24 /* SwiftUICommon */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -577,6 +600,11 @@
 		70E35F6F27FBDFA200483D24 /* SwiftUICommon */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftUICommon;
+		};
+		70FD8DBF282B315700E490F0 /* CasePaths */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70FD8DBE282B315700E490F0 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
+			productName = CasePaths;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
