@@ -8,7 +8,7 @@
 #if canImport(UIKit)
 import UIKit
 
-public extension UIApplication {
+extension UIApplication {
     static func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
