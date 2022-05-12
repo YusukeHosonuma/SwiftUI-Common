@@ -20,21 +20,17 @@ public extension View {
     }
     #endif
 
-    //
-
-    // MARK: For readability.
-
-    //
+    // MARK: - Readability
 
     func enabled(_ enabled: Bool) -> some View {
         disabled(enabled == false)
     }
 
-    //
+    func frame(size: CGSize?) -> some View {
+        frame(width: size?.width, height: size?.height)
+    }
 
-    // MARK: Add Modifier according to condition.
-
-    //
+    // MARK: - Condition
 
     func extend<Content: View>(@ViewBuilder transform: (Self) -> Content) -> some View {
         transform(self)
@@ -58,11 +54,7 @@ public extension View {
         }
     }
 
-    //
-
-    // MARK: Decoration
-
-    //
+    // MARK: - Decoration
 
     func border(_ color: Color, width: CGFloat = 1, edge: Edge.Set) -> some View {
         overlay(
@@ -89,14 +81,66 @@ public extension View {
         )
     }
 
-    //
+    // MARK: - Preference
 
-    // MARK: For debug.
+    @ViewBuilder
+    func sizePreference() -> some View {
+        background(
+            GeometryReader { local in
+                Color.clear
+                    .preference(key: SizeKey.self, value: local.size)
+            }
+        )
+    }
 
-    //
+    @ViewBuilder
+    func onChangeSizePreference(_ perform: @escaping (CGSize) -> Void) -> some View {
+        onPreferenceChange(SizeKey.self) { size in
+            if let size = size {
+                perform(size)
+            }
+        }
+    }
+
+    // MARK: - Debug
 
     func debug(_ handler: () -> Void) -> Self {
         handler()
         return self
+    }
+}
+
+@available(iOS 15, *)
+extension View {
+    @ViewBuilder
+    func boundsPreference() -> some View {
+        anchorPreference(key: BoundsKey.self, value: .bounds) { $0 }
+    }
+
+    @ViewBuilder
+    func onChangeBoundsPreference(_ geometry: GeometryProxy, perform: @escaping (CGSize) -> Void) -> some View {
+        onPreferenceChange(BoundsKey.self) { anchor in
+            if let anchor = anchor {
+                perform(geometry[anchor].size)
+            }
+        }
+    }
+}
+
+// MARK: - PreferenceKey
+
+private struct BoundsKey: PreferenceKey {
+    static var defaultValue: Anchor<CGRect>?
+
+    static func reduce(value: inout Anchor<CGRect>?, nextValue: () -> Anchor<CGRect>?) {
+        value = nextValue()
+    }
+}
+
+private struct SizeKey: PreferenceKey {
+    static var defaultValue: CGSize?
+
+    static func reduce(value: inout CGSize?, nextValue: () -> CGSize?) {
+        value = nextValue()
     }
 }
