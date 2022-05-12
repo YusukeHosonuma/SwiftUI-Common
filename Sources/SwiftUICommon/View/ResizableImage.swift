@@ -35,10 +35,20 @@ private struct ResizableImage: View {
                 if imageSize.width < geometry.size.width {
                     size = imageSize
                 } else {
-                    size = .init(
-                        width: geometry.size.width,
-                        height: imageSize.height * (geometry.size.width / imageSize.width)
-                    )
+                    if (contentMode == .fit && imageSize.height < imageSize.width) ||
+                        (contentMode == .fill && imageSize.width < imageSize.height)
+                    {
+                        size = .init(
+                            width: geometry.size.width,
+                            height: imageSize.height * (geometry.size.width / imageSize.width)
+                        )
+                    } else {
+                        let ratio = (imageSize.width / imageSize.height)
+                        size = .init(
+                            width: geometry.size.width * ratio,
+                            height: imageSize.height * (geometry.size.width / imageSize.width) * ratio
+                        )
+                    }
                 }
             }
         }
