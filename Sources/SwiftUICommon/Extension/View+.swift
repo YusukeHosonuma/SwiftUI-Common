@@ -20,9 +20,7 @@ public extension View {
     }
     #endif
 
-    //
-    // MARK: For readability.
-    //
+    // MARK: - Readability
 
     func enabled(_ enabled: Bool) -> some View {
         disabled(enabled == false)
@@ -32,9 +30,7 @@ public extension View {
         frame(width: size?.width, height: size?.height)
     }
 
-    //
-    // MARK: Add Modifier according to condition.
-    //
+    // MARK: - Condition
 
     func extend<Content: View>(@ViewBuilder transform: (Self) -> Content) -> some View {
         transform(self)
@@ -58,9 +54,7 @@ public extension View {
         }
     }
 
-    //
-    // MARK: Decoration
-    //
+    // MARK: - Decoration
 
     func border(_ color: Color, width: CGFloat = 1, edge: Edge.Set) -> some View {
         overlay(
@@ -87,10 +81,8 @@ public extension View {
         )
     }
 
-    //
-    // MARK: Preference
-    //
-    
+    // MARK: - Preference
+
     @ViewBuilder
     func sizePreference() -> some View {
         background(
@@ -100,7 +92,7 @@ public extension View {
             }
         )
     }
-    
+
     @ViewBuilder
     func onChangeSizePreference(_ perform: @escaping (CGSize) -> Void) -> some View {
         onPreferenceChange(SizeKey.self) { size in
@@ -110,9 +102,7 @@ public extension View {
         }
     }
 
-    //
-    // MARK: For debug.
-    //
+    // MARK: - Debug
 
     func debug(_ handler: () -> Void) -> Self {
         handler()
@@ -126,7 +116,7 @@ extension View {
     func boundsPreference() -> some View {
         anchorPreference(key: BoundsKey.self, value: .bounds) { $0 }
     }
-    
+
     @ViewBuilder
     func onChangePreferenceBounds(_ geometry: GeometryProxy, _ handler: @escaping (CGSize) -> Void) -> some View {
         onPreferenceChange(BoundsKey.self) { anchor in
@@ -137,7 +127,7 @@ extension View {
     }
 }
 
-// MARK: PreferenceKey
+// MARK: - PreferenceKey
 
 private struct BoundsKey: PreferenceKey {
     static var defaultValue: Anchor<CGRect>?
