@@ -118,10 +118,10 @@ extension View {
     }
 
     @ViewBuilder
-    func onChangePreferenceBounds(_ geometry: GeometryProxy, _ handler: @escaping (CGSize) -> Void) -> some View {
+    func onChangeBoundsPreference(_ geometry: GeometryProxy, perform: @escaping (CGSize) -> Void) -> some View {
         onPreferenceChange(BoundsKey.self) { anchor in
             if let anchor = anchor {
-                handler(geometry[anchor].size)
+                perform(geometry[anchor].size)
             }
         }
     }
