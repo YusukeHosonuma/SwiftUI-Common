@@ -20,6 +20,8 @@ TextEdit("Please paste.", text: $text, font: .custom("SF Mono", size: 16))
 <details>
 <summary>ResizableImage</summary>
 
+[ResizableImage](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/ResizableImage.swift)
+    
 The [Image](https://developer.apple.com/documentation/swiftui/image) that is resized only if it extends beyond the area.
 
 ```swift
