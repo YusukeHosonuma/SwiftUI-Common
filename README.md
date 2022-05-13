@@ -18,6 +18,26 @@ TextEdit("Please paste.", text: $text, font: .custom("SF Mono", size: 16))
 
 
 <details>
+<summary>ResizableImage</summary>
+
+The [Image](https://developer.apple.com/documentation/swiftui/image) that is resized only if it extends beyond the area.
+
+```swift
+
+Group {
+    ResizableImage(systemName: "swift", contentMode: .fit)
+    ResizableImage("island", contentMode: .fit)
+    ResizableImage("island", contentMode: .fill)
+}
+.frame(width: 140, height: 140)
+.border(.red)
+```
+    
+<img width="317" src="https://user-images.githubusercontent.com/2990285/168200204-dc465a71-c3f1-4b92-98f8-8353f3c8ad46.png">
+</details>
+
+
+<details>
 <summary>WebView</summary>
 
 [WebView.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/WebView.swift) (bridge to [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview))
