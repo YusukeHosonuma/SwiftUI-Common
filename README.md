@@ -504,12 +504,12 @@ Task {
     
 ## Install
 
-If you want. (currently not compliant with semantic version)
+If you want.
 
 ```swift
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/YusukeHosonuma/SwiftUI-Common.git", branch: "main"),
+        .package(url: "https://github.com/YusukeHosonuma/SwiftUI-Common.git", from: "1.0.0"),
     ],
     targets: [
         .target(name: "<your-target-name>", dependencies: [
@@ -522,6 +522,8 @@ let package = Package(
 ## Links
 
 - This library is used in the following:
+  - [SwiftUI-Simulator](https://github.com/YusukeHosonuma/SwiftUI-Simulator)
+  - [UserDefaults-Browser](https://github.com/YusukeHosonuma/UserDefaultsBrowser)
   - [Swift-Evolution-Browser](https://github.com/YusukeHosonuma/Swift-Evolution-Browser) 
   - [E2DC](https://github.com/YusukeHosonuma/E2DC)
 - Document (Japanese):
