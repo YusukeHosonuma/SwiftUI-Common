@@ -12,7 +12,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                Section("Bridge") {
+                Section("Control") {
+                    navigationLink("ResizableImage") {
+                        ResizableImageView()
+                    }
+                    
                     navigationLink("WebView") {
                         SampleWebView()
                     }
