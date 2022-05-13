@@ -1,3 +1,7 @@
+[![Build](https://github.com/YusukeHosonuma/SwiftUI-Common/actions/workflows/main.yml/badge.svg)](https://github.com/YusukeHosonuma/SwiftUI-Common/actions/workflows/main.yml)
+![iOS 14+](https://img.shields.io/badge/iOS-14+-4BC51D.svg?style=flat)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Ftobi462)](https://twitter.com/tobi462)
+
 # SwiftUI-Common
 
 SwiftUI components and extensions that seem to be highly reusable.
