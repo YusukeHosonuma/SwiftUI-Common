@@ -7,19 +7,27 @@
 
 import SwiftUI
 
-public extension Image {
-    func original(or contentMode: ContentMode) -> some View {
-        ResizableImage(image: self, contentMode: contentMode)
+public extension ResizableImage {
+    init(_ name: String, contentMode: ContentMode) {
+        self.init(image: Image(name), contentMode: contentMode)
+    }
+    
+    init(systemName: String, contentMode: ContentMode) {
+        self.init(image: Image(systemName: systemName), contentMode: contentMode)
+    }
+
+    init(uiImage: UIImage, contentMode: ContentMode) {
+        self.init(image: Image(uiImage: uiImage), contentMode: contentMode)
     }
 }
 
-private struct ResizableImage: View {
-    let image: Image
-    let contentMode: ContentMode
-
+public struct ResizableImage: View {
+    private let image: Image
+    private let contentMode: ContentMode
+    
     @State private var size: CGSize?
 
-    var body: some View {
+    public var body: some View {
         GeometryReader { geometry in
             Group {
                 if let size = size {
@@ -38,11 +46,19 @@ private struct ResizableImage: View {
                     if (contentMode == .fit && imageSize.height < imageSize.width) ||
                         (contentMode == .fill && imageSize.width < imageSize.height)
                     {
+                        //
+                        // Calculated from `width`.
+                        //
                         size = .init(
                             width: geometry.size.width,
                             height: imageSize.height * (geometry.size.width / imageSize.width)
                         )
                     } else {
+                        //
+                        // Calculated from `height`.
+                        //
+                        // ⚠️ Can't get correct size from `geometry.size.height` when used in `ScrollView` and others.
+                        //
                         let ratio = (imageSize.width / imageSize.height)
                         size = .init(
                             width: geometry.size.width * ratio,
