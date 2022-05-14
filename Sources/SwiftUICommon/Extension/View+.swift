@@ -97,8 +97,7 @@ public extension View {
         )
     }
 
-    @ViewBuilder
-    func onChangeSizePreference(_ perform: @escaping (CGSize) -> Void) -> some View {
+    func onChangeSizePreference(perform: @escaping (CGSize) -> Void) -> some View {
         onPreferenceChange(SizeKey.self) { size in
             if let size = size {
                 perform(size)
@@ -116,12 +115,10 @@ public extension View {
 
 @available(iOS 15, *)
 extension View {
-    @ViewBuilder
     func boundsPreference() -> some View {
         anchorPreference(key: BoundsKey.self, value: .bounds) { $0 }
     }
 
-    @ViewBuilder
     func onChangeBoundsPreference(_ geometry: GeometryProxy, perform: @escaping (CGSize) -> Void) -> some View {
         onPreferenceChange(BoundsKey.self) { anchor in
             if let anchor = anchor {
