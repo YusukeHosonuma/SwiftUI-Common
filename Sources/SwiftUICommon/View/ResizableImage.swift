@@ -25,49 +25,58 @@ public struct ResizableImage: View {
     private let image: Image
     private let contentMode: ContentMode
     
-    @State private var size: CGSize?
+    @State private var imageSize: CGSize?
 
     public var body: some View {
         GeometryReader { geometry in
             Group {
-                if let size = size {
+                if let size = imageSize {
                     image
                         .resizable()
                         .aspectRatio(contentMode: contentMode)
                         .frame(size: size)
                 } else {
-                    image.sizePreference() // 💡 get original image size. (1st time only)
-                }
-            }
-            .onChangeSizePreference { imageSize in
-                if imageSize.width < geometry.size.width {
-                    size = imageSize
-                } else {
-                    if (contentMode == .fit && imageSize.height < imageSize.width) ||
-                        (contentMode == .fill && imageSize.width < imageSize.height)
-                    {
-                        //
-                        // Calculated from `width`.
-                        //
-                        size = .init(
-                            width: geometry.size.width,
-                            height: imageSize.height * (geometry.size.width / imageSize.width)
-                        )
-                    } else {
-                        //
-                        // Calculated from `height`.
-                        //
-                        // ⚠️ Can't get correct size from `geometry.size.height` when used in `ScrollView` and others.
-                        //
-                        let ratio = (imageSize.width / imageSize.height)
-                        size = .init(
-                            width: geometry.size.width * ratio,
-                            height: imageSize.height * (geometry.size.width / imageSize.width) * ratio
-                        )
-                    }
+                    // 💡 1st time only
+                    image
+                        .onChangeSize {
+                            imageSize = Self.calculateImageSize(
+                                bounds: geometry.size,
+                                originalSize: $0,
+                                contentMode: contentMode
+                            )
+                        }
                 }
             }
         }
-        .frame(size: size)
+        .frame(size: imageSize)
+    }
+    
+    static func calculateImageSize(bounds: CGSize, originalSize size: CGSize, contentMode: ContentMode) -> CGSize {
+        if size.width < bounds.width {
+            return size
+        } else {
+            if (contentMode == .fit && size.height < size.width) ||
+                (contentMode == .fill && size.width < size.height)
+            {
+                //
+                // Calculated from `width`.
+                //
+                return .init(
+                    width: bounds.width,
+                    height: size.height * (bounds.width / size.width)
+                )
+            } else {
+                //
+                // Calculated from `height`.
+                //
+                // ⚠️ Can't get correct size from `bounds.height` when used in `ScrollView` and others.
+                //
+                let ratio = (size.width / size.height)
+                return .init(
+                    width: bounds.width * ratio,
+                    height: size.height * (bounds.width / size.width) * ratio
+                )
+            }
+        }
     }
 }
