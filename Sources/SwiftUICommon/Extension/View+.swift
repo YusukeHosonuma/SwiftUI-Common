@@ -81,9 +81,13 @@ public extension View {
         )
     }
 
-    // MARK: - Preference
+    // MARK: - Size
 
-    @ViewBuilder
+    func onChangeSize(perform: @escaping (CGSize) -> Void) -> some View {
+        sizePreference()
+            .onChangeSizePreference(perform: perform)
+    }
+    
     func sizePreference() -> some View {
         background(
             GeometryReader { local in
