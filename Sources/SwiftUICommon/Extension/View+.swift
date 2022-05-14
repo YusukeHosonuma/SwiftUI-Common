@@ -87,7 +87,7 @@ public extension View {
         sizePreference()
             .onChangeSizePreference(perform: perform)
     }
-    
+
     func sizePreference() -> some View {
         background(
             GeometryReader { local in
@@ -106,6 +106,12 @@ public extension View {
     }
 
     // MARK: - Debug
+
+    func print(_ target: Any) -> Self {
+        debug {
+            Swift.print(target)
+        }
+    }
 
     func debug(_ handler: () -> Void) -> Self {
         handler()

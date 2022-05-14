@@ -11,7 +11,7 @@ public extension ResizableImage {
     init(_ name: String, contentMode: ContentMode) {
         self.init(image: Image(name), contentMode: contentMode)
     }
-    
+
     init(systemName: String, contentMode: ContentMode) {
         self.init(image: Image(systemName: systemName), contentMode: contentMode)
     }
@@ -24,7 +24,7 @@ public extension ResizableImage {
 public struct ResizableImage: View {
     private let image: Image
     private let contentMode: ContentMode
-    
+
     @State private var imageSize: CGSize?
 
     public var body: some View {
@@ -50,7 +50,7 @@ public struct ResizableImage: View {
         }
         .frame(size: imageSize)
     }
-    
+
     static func calculateImageSize(bounds: CGSize, originalSize size: CGSize, contentMode: ContentMode) -> CGSize {
         if size.width < bounds.width {
             return size

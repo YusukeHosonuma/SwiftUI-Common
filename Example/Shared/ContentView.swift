@@ -16,7 +16,7 @@ struct ContentView: View {
                     navigationLink("ResizableImage") {
                         ResizableImageView()
                     }
-                    
+
                     navigationLink("WebView") {
                         SampleWebView()
                     }
