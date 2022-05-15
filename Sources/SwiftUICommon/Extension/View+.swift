@@ -104,32 +104,6 @@ public extension View {
             }
         }
     }
-
-    // MARK: - Debug
-
-    func print(_ target: Any) -> Self {
-        debug {
-            Swift.print(target)
-        }
-    }
-
-    ///
-    /// Print `value` when it changed.
-    ///
-    /// ```
-    /// .printOnChange("🍎") { value }
-    /// ```
-    ///
-    func printOnChange<Value: Equatable>(_ label: String = "", value: () -> Value) -> some View {
-        onChange(of: value()) {
-            Swift.print("\(label)\($0)")
-        }
-    }
-
-    func debug(_ handler: () -> Void) -> Self {
-        handler()
-        return self
-    }
 }
 
 @available(iOS 15, *)
