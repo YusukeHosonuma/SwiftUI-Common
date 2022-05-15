@@ -104,19 +104,6 @@ public extension View {
             }
         }
     }
-
-    // MARK: - Debug
-
-    func print(_ target: Any) -> Self {
-        debug {
-            Swift.print(target)
-        }
-    }
-
-    func debug(_ handler: () -> Void) -> Self {
-        handler()
-        return self
-    }
 }
 
 @available(iOS 15, *)
