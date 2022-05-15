@@ -204,21 +204,6 @@ Text("Hello")
 
 
 <details>
-<summary>debug { ... }</summary>
-  
-```swift
-func content(text: String, number: Int) -> some View {
-    Text("\(text), \(number)")
-        .debug {
-            print("text: \(text)")
-            print("number: \(number)")
-        }
-}
-```
-</details>
-
-
-<details>
 <summary>toggleSidebar()</summary>
   
 ```swift
@@ -235,6 +220,45 @@ Button("toggle") {
 ```swift
 Button("hide") {
     hideKeyboard()
+}
+```
+</details>
+
+[View+Debug.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2BDebug.swift)
+
+<details>
+<summary>debug { ... }</summary>
+  
+```swift
+func content(number: Int) -> some View {
+    Text("\(number)")
+        .debug {
+            print("number: \(number)") // 💡 Any debug code.
+        }
+}
+```
+</details>
+
+<details>
+<summary>print()</summary>
+
+```swift
+func content(number: Int) -> some View {
+    Text("\(number)")
+        .print("number: \(number)") // 💡
+}
+```
+</details>
+
+<details>
+<summary>printOnChange()</summary>
+
+```swift
+@State var number: Int = 42
+
+var body: some View {
+    Text("\(number)")
+        .printOnChange("number: ") { number } // 💡 Print "number: 42" when `number is changed.
 }
 ```
 </details>
