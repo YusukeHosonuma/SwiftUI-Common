@@ -18,3 +18,6 @@ jobs:
 
       - name: Build
         run: swift build -Xswiftc -sdk -Xswiftc /Applications/Xcode_13.3.1.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.4.sdk -Xswiftc -target -Xswiftc x86_64-apple-ios15.4-simulator
+
+      - name: Test
+        run: xcodebuild test -destination 'name=iPhone 13' -scheme 'SwiftUI-Common'
