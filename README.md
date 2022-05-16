@@ -456,8 +456,8 @@ a < b // 💡 Alias for `a.width < b.width && a.height < b.height`
 ```swift
 let a = CGSize(width: 10, height: 20)
 let b = CGSize(width: 5, height: 10)
-a + b // 💡 Alias for `.init(width: a.width + b.width, height: a.height + b.height)
-a - b // 💡 Alias for `.init(width: a.width - b.width, height: a.height - b.height)
+a + b // 💡 Alias for `CGSize(width: a.width + b.width, height: a.height + b.height)
+a - b // 💡 Alias for `CGSize(width: a.width - b.width, height: a.height - b.height)
 ```
 </details>
 
