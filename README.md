@@ -434,6 +434,33 @@ struct SliderView: View {
 
 <img width="333" alt="image" src="https://user-images.githubusercontent.com/2990285/167333536-031af3f8-86ce-46bd-81e4-6dc63f51eb2c.png">
 </details>
+
+## CGSize extensions
+
+[CGSize+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/CGSize%2B.swift)
+
+<details>
+<summary>Comparable</summary>
+
+```swift
+let a = CGSize(width: 10, height: 20)
+let b = CGSize(width: 5, height: 10)
+a < b // 💡 Alias for `a.width < b.width && a.height < b.height`
+```
+</details>
+
+
+<details>
+<summary>AdditiveArithmetic</summary>
+
+```swift
+let a = CGSize(width: 10, height: 20)
+let b = CGSize(width: 5, height: 10)
+a + b // 💡 Alias for `.init(width: a.width + b.width, height: a.height + b.height)
+a - b // 💡 Alias for `.init(width: a.width - b.width, height: a.height - b.height)
+```
+</details>
+
     
 ## Image extensions
 
