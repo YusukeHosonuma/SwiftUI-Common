@@ -19,5 +19,8 @@ let package = Package(
         .target(name: "SwiftUICommon", dependencies: [
             .product(name: "CasePaths", package: "swift-case-paths"),
         ]),
+        .testTarget(name: "SwiftUICommonTests", dependencies: [
+            "SwiftUICommon",
+        ]),
     ]
 )
