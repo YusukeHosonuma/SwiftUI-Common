@@ -15,11 +15,27 @@ public extension ResizableImage {
     init(systemName: String, contentMode: ContentMode) {
         self.init(image: Image(systemName: systemName), contentMode: contentMode)
     }
+}
 
+#if canImport(UIKit)
+import UIKit
+
+public extension ResizableImage {
     init(uiImage: UIImage, contentMode: ContentMode) {
         self.init(image: Image(uiImage: uiImage), contentMode: contentMode)
     }
 }
+#endif
+
+#if canImport(AppKit)
+import AppKit
+
+public extension ResizableImage {
+    init(nsImage: NSImage, contentMode: ContentMode) {
+        self.init(image: Image(nsImage: nsImage), contentMode: contentMode)
+    }
+}
+#endif
 
 public struct ResizableImage: View {
     private let image: Image

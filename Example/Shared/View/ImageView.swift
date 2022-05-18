@@ -23,9 +23,9 @@ struct ImageView: View {
     private func renderImage() -> XImage {
         // ⚠️ Assumes rendering code
         #if os(macOS)
-        NSImage(named: "picture")!
+        NSImage(named: "sado-island")!
         #else
-        UIImage(named: "picture")!
+        UIImage(named: "sado-island")!
         #endif
     }
 }
