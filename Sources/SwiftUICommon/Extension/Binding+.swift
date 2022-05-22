@@ -79,7 +79,7 @@ public extension Binding {
     }
 }
 
-extension Binding where Value == Bool {
+public extension Binding where Value == Bool {
     func inverted() -> Binding<Bool> {
         .init(
             get: { !wrappedValue },
