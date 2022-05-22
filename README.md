@@ -297,7 +297,7 @@ var body: some View {
 <details>
 <summary>inverted()</summary>
     
-```
+```swift
 @State var isEnabled = false
 
 var body: some View {
