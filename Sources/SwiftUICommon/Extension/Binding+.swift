@@ -79,6 +79,15 @@ public extension Binding {
     }
 }
 
+extension Binding where Value == Bool {
+    func inverted() -> Binding<Bool> {
+        .init(
+            get: { !wrappedValue },
+            set: { wrappedValue = !$0 }
+        )
+    }
+}
+
 public extension Binding where Value: SliderValue {
     func slider() -> Binding<Double> {
         .init(
