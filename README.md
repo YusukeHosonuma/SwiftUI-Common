@@ -293,6 +293,19 @@ var body: some View {
 ```
 </details>
 
+    
+<details>
+<summary>inverted()</summary>
+    
+```
+@State var isEnabled = false
+
+var body: some View {
+    Toggle("Disable", isOn: $isEnabled.inverted()) // ✅ `true` -> `false` and `false` -> true`
+    Text("isEnabled: \(isEnabled ? "True" : "False")")
+}
+```
+</details>
 
 <details>
 <summary>optional()</summary>
