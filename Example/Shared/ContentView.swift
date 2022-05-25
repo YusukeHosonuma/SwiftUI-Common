@@ -38,6 +38,9 @@ struct ContentView: View {
                 }
 
                 Section("View+") {
+                    navigationLink(".alert(<error>) { ... }") {
+                        AlertView()
+                    }
                     navigationLink(".enabled(<condition>)") {
                         EnabledView()
                     }

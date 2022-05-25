@@ -107,7 +107,9 @@ public extension View {
 }
 
 @available(iOS 15, *)
-extension View {
+public extension View {
+    // MARK: - Bounds
+
     func boundsPreference() -> some View {
         anchorPreference(key: BoundsKey.self, value: .bounds) { $0 }
     }

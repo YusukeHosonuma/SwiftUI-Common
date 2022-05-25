@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700AF436283CE2FE00180E32 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AF435283CE2FE00180E32 /* AlertView.swift */; };
 		700EA9352827B018005191A1 /* EnabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9342827B018005191A1 /* EnabledView.swift */; };
 		700EA9362827B018005191A1 /* EnabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9342827B018005191A1 /* EnabledView.swift */; };
 		700EA9392827B3A5005191A1 /* WrappedBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9382827B3A5005191A1 /* WrappedBindingView.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700AF435283CE2FE00180E32 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		700EA9342827B018005191A1 /* EnabledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledView.swift; sourceTree = "<group>"; };
 		700EA9382827B3A5005191A1 /* WrappedBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedBindingView.swift; sourceTree = "<group>"; };
 		701CAB60280428DE00A2D597 /* WhenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700AF434283CE2E600180E32 /* View+ */ = {
+			isa = PBXGroup;
+			children = (
+				700AF435283CE2FE00180E32 /* AlertView.swift */,
+			);
+			path = "View+";
+			sourceTree = "<group>";
+		};
 		700EA9372827B38D005191A1 /* Binding */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 		70E35F7427FBECEE00483D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				700AF434283CE2E600180E32 /* View+ */,
 				70578E26282DF83500F3C882 /* Control */,
 				70DEEA37282B62DB009E7121 /* Compatible */,
 				700EA9372827B38D005191A1 /* Binding */,
@@ -314,6 +325,7 @@
 				70914AA32803FC8800358A9C /* BindingOptionalView.swift in Sources */,
 				70E35F7227FBE71B00483D24 /* SampleWebView.swift in Sources */,
 				70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */,
+				700AF436283CE2FE00180E32 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
