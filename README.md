@@ -224,6 +224,62 @@ Button("hide") {
 ```
 </details>
 
+[View+Alert.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2BAlert.swift)
+
+<details>
+<summary>alert(error: $error)</summary>
+  
+```swift
+enum MyError: LocalizedError {
+    case warning, fatal
+
+    var errorDescription: String? {
+        switch self {
+        case .warning: return "Warning"
+        case .fatal: return "Fatal"
+        }
+    }
+
+    var helpMessage: String {
+        switch self {
+        case .warning: return "This is warning."
+        case .fatal: return "This is fatal."
+        }
+    }
+}
+
+struct ContentView: View {
+    @State var error: MyError? = nil
+
+    var body: some View {
+        VStack {
+            Button("Warning") { error = .warning }
+            Button("Fatal") { error = .fatal }
+        }
+        //
+        // iOS 15+
+        //
+        .alert(error: $error) {}     // ✅ Not need to specify `isPresented: Binding<Bool>`.
+        .alert(error: $error) { _ in // 💡 You can specify message.
+            Button("OK") {}
+        } message: { error in
+            Text(error.helpMessage)
+        }
+        //
+        // iOS 14+
+        //
+        .alert(error: $error)
+        .alert(
+            error: $error,
+            message: Text(error?.helpMessage ?? "unknown"),
+            dismissButton: .cancel() // Optional
+        )
+    }
+}
+```
+</details>
+
+
 [View+Debug.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/View%2BDebug.swift)
 
 <details>
