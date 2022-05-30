@@ -50,7 +50,7 @@ struct AlertView: View {
             //
             // ✅ Not need to specify `isPresented: Binding<Bool>`.
             //
-            if #available(iOS 15, *) {
+            if #available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *) {
                 content
                     .alert(error: $error) {}
                     .alert(error: $errorWithMessage) { _ in

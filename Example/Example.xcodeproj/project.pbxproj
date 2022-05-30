@@ -18,6 +18,7 @@
 		701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E6B8D280BBD9000B026C7 /* WhenLetView.swift */; };
 		7021DEAA28448571003186D4 /* InvertedMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021DEA928448571003186D4 /* InvertedMaskView.swift */; };
 		7021DEAB28448571003186D4 /* InvertedMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021DEA928448571003186D4 /* InvertedMaskView.swift */; };
+		7021DEAC28448962003186D4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AF435283CE2FE00180E32 /* AlertView.swift */; };
 		702286512828D54E002673FF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702286502828D54E002673FF /* ImageView.swift */; };
 		702286522828D54E002673FF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702286502828D54E002673FF /* ImageView.swift */; };
 		7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042255D280BDAAB00B9F336 /* DebugView.swift */; };
@@ -357,6 +358,7 @@
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */,
 				70FD8DC3282B363400E490F0 /* BindingMapView.swift in Sources */,
+				7021DEAC28448962003186D4 /* AlertView.swift in Sources */,
 				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */,
 				700EA9362827B018005191A1 /* EnabledView.swift in Sources */,
