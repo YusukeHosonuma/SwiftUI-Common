@@ -69,6 +69,12 @@ struct ContentView: View {
                     }
                 }
 
+                Section("View+Layer") {
+                    navigationLink(".invertedMask { ... }") {
+                        InvertedMaskView()
+                    }
+                }
+
                 Section("Misc") {
                     navigationLink("SliderValue") {
                         SliderView()
