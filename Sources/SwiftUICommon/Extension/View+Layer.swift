@@ -7,6 +7,33 @@
 
 import SwiftUI
 
+public extension View {
+    func border(_ color: Color, width: CGFloat = 1, edge: Edge.Set) -> some View {
+        overlay(
+            VStack(spacing: 0) {
+                if edge == .all || edge == .vertical || edge == .top {
+                    color.frame(height: width)
+                }
+                Spacer()
+                if edge == .all || edge == .vertical || edge == .bottom {
+                    color.frame(height: width)
+                }
+            }
+        )
+        .overlay(
+            HStack(spacing: 0) {
+                if edge == .all || edge == .horizontal || edge == .leading {
+                    color.frame(width: width)
+                }
+                Spacer()
+                if edge == .all || edge == .horizontal || edge == .trailing {
+                    color.frame(width: width)
+                }
+            }
+        )
+    }
+}
+
 // 🌱 Special Thanks.
 // https://fivestars.blog/articles/reverse-masks-how-to/
 

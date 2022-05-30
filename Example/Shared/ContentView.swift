@@ -64,12 +64,12 @@ struct ContentView: View {
                     navigationLink(".whenLet(<optional>) { ... }") {
                         WhenLetView()
                     }
-                    navigationLink(".border(.red, width: 1, edge: .top)") {
-                        BorderSampleView()
-                    }
                 }
 
                 Section("View+Layer") {
+                    navigationLink(".border(.red, width: 1, edge: .top)") {
+                        BorderSampleView()
+                    }
                     navigationLink(".invertedMask { ... }") {
                         InvertedMaskView()
                     }
