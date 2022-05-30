@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: iOS 15+
 
-@available(iOS 15, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 public extension View {
     func alert<E: LocalizedError, A: View>(
         error: Binding<E?>,
