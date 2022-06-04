@@ -639,6 +639,20 @@ let package = Package(
 )
 ```
 
+## Development
+
+Setup:
+
+```sh
+make setup
+```
+
+Format:
+
+```sh
+make format
+```
+
 ## Links
 
 - This library is used in the following:
