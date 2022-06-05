@@ -38,6 +38,9 @@ struct ContentView: View {
                 }
 
                 Section("View+") {
+                    navigationLink(".alert(<error>) { ... }") {
+                        AlertView()
+                    }
                     navigationLink(".enabled(<condition>)") {
                         EnabledView()
                     }
@@ -61,8 +64,14 @@ struct ContentView: View {
                     navigationLink(".whenLet(<optional>) { ... }") {
                         WhenLetView()
                     }
+                }
+
+                Section("View+Layer") {
                     navigationLink(".border(.red, width: 1, edge: .top)") {
                         BorderSampleView()
+                    }
+                    navigationLink(".invertedMask { ... }") {
+                        InvertedMaskView()
                     }
                 }
 

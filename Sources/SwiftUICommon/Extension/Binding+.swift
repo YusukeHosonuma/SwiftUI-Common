@@ -51,6 +51,20 @@ public extension Binding {
     }
 
     //
+    // `Binding<T?>` -> `Binding<Bool>`
+    //
+    func isPresent<Wrapped>() -> Binding<Bool> where Value == Wrapped? {
+        .init(
+            get: { self.wrappedValue != nil },
+            set: {
+                if $0 == false {
+                    self.wrappedValue = nil
+                }
+            }
+        )
+    }
+
+    //
     // `Binding<T?>` -> `Binding<T>?`
     //
     func wrapped<Wrapped>() -> Binding<Wrapped>? where Value == Wrapped? {
@@ -76,6 +90,15 @@ public extension Binding {
         } else {
             return nil
         }
+    }
+}
+
+public extension Binding where Value == Bool {
+    func inverted() -> Binding<Bool> {
+        .init(
+            get: { !wrappedValue },
+            set: { wrappedValue = !$0 }
+        )
     }
 }
 

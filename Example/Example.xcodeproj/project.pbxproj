@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700AF436283CE2FE00180E32 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AF435283CE2FE00180E32 /* AlertView.swift */; };
 		700EA9352827B018005191A1 /* EnabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9342827B018005191A1 /* EnabledView.swift */; };
 		700EA9362827B018005191A1 /* EnabledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9342827B018005191A1 /* EnabledView.swift */; };
 		700EA9392827B3A5005191A1 /* WrappedBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700EA9382827B3A5005191A1 /* WrappedBindingView.swift */; };
@@ -15,6 +16,9 @@
 		701CAB62280428DE00A2D597 /* WhenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701CAB60280428DE00A2D597 /* WhenView.swift */; };
 		701E6B8E280BBD9000B026C7 /* WhenLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E6B8D280BBD9000B026C7 /* WhenLetView.swift */; };
 		701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E6B8D280BBD9000B026C7 /* WhenLetView.swift */; };
+		7021DEAA28448571003186D4 /* InvertedMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021DEA928448571003186D4 /* InvertedMaskView.swift */; };
+		7021DEAB28448571003186D4 /* InvertedMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7021DEA928448571003186D4 /* InvertedMaskView.swift */; };
+		7021DEAC28448962003186D4 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AF435283CE2FE00180E32 /* AlertView.swift */; };
 		702286512828D54E002673FF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702286502828D54E002673FF /* ImageView.swift */; };
 		702286522828D54E002673FF /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702286502828D54E002673FF /* ImageView.swift */; };
 		7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042255D280BDAAB00B9F336 /* DebugView.swift */; };
@@ -47,10 +51,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		700AF435283CE2FE00180E32 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		700EA9342827B018005191A1 /* EnabledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledView.swift; sourceTree = "<group>"; };
 		700EA9382827B3A5005191A1 /* WrappedBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedBindingView.swift; sourceTree = "<group>"; };
 		701CAB60280428DE00A2D597 /* WhenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenView.swift; sourceTree = "<group>"; };
 		701E6B8D280BBD9000B026C7 /* WhenLetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhenLetView.swift; sourceTree = "<group>"; };
+		7021DEA928448571003186D4 /* InvertedMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertedMaskView.swift; sourceTree = "<group>"; };
 		702286502828D54E002673FF /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		7042255D280BDAAB00B9F336 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		70578E27282DF84600F3C882 /* ResizableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableImageView.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		700AF434283CE2E600180E32 /* View+ */ = {
+			isa = PBXGroup;
+			children = (
+				700AF435283CE2FE00180E32 /* AlertView.swift */,
+			);
+			path = "View+";
+			sourceTree = "<group>";
+		};
 		700EA9372827B38D005191A1 /* Binding */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +115,14 @@
 				70FD8DC1282B363400E490F0 /* BindingMapView.swift */,
 			);
 			path = Binding;
+			sourceTree = "<group>";
+		};
+		7021DEA82844855F003186D4 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				7021DEA928448571003186D4 /* InvertedMaskView.swift */,
+			);
+			path = Layer;
 			sourceTree = "<group>";
 		};
 		70578E26282DF83500F3C882 /* Control */ = {
@@ -176,6 +198,8 @@
 		70E35F7427FBECEE00483D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7021DEA82844855F003186D4 /* Layer */,
+				700AF434283CE2E600180E32 /* View+ */,
 				70578E26282DF83500F3C882 /* Control */,
 				70DEEA37282B62DB009E7121 /* Compatible */,
 				700EA9372827B38D005191A1 /* Binding */,
@@ -299,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				700EA9392827B3A5005191A1 /* WrappedBindingView.swift in Sources */,
+				7021DEAA28448571003186D4 /* InvertedMaskView.swift in Sources */,
 				7042255E280BDAAB00B9F336 /* DebugView.swift in Sources */,
 				70578E28282DF84600F3C882 /* ResizableImageView.swift in Sources */,
 				70DEEA39282B62E9009E7121 /* SheetDismissView.swift in Sources */,
@@ -314,6 +339,7 @@
 				70914AA32803FC8800358A9C /* BindingOptionalView.swift in Sources */,
 				70E35F7227FBE71B00483D24 /* SampleWebView.swift in Sources */,
 				70E35F5927FBDC4000483D24 /* ExampleApp.swift in Sources */,
+				700AF436283CE2FE00180E32 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,9 +354,11 @@
 				70AE25CA280947F900A9E517 /* BorderSampleView.swift in Sources */,
 				70DEEA3A282B7149009E7121 /* SheetDismissView.swift in Sources */,
 				702286522828D54E002673FF /* ImageView.swift in Sources */,
+				7021DEAB28448571003186D4 /* InvertedMaskView.swift in Sources */,
 				70E35F5C27FBDC4000483D24 /* ContentView.swift in Sources */,
 				70FD8DBD282B309E00E490F0 /* CaseBindingView.swift in Sources */,
 				70FD8DC3282B363400E490F0 /* BindingMapView.swift in Sources */,
+				7021DEAC28448962003186D4 /* AlertView.swift in Sources */,
 				70914AA12803F88200358A9C /* SliderView.swift in Sources */,
 				701E6B8F280BBD9000B026C7 /* WhenLetView.swift in Sources */,
 				700EA9362827B018005191A1 /* EnabledView.swift in Sources */,
