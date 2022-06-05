@@ -77,6 +77,35 @@ public extension View {
             }
         }
     }
+
+    // MARK: - Layout
+
+    // 🌱 Special Thanks.
+    // https://www.youtube.com/channel/UCsuV4MRk_aB291SrchUVb4w/community?lb=Ugkx5J9vpBLrGCay7ZlpXpXlLpXzGE5cD9mn
+
+    func hLeading() -> some View {
+        frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    func hTrailing() -> some View {
+        frame(maxWidth: .infinity, alignment: .trailing)
+    }
+
+    func hCenter() -> some View {
+        frame(maxWidth: .infinity, alignment: .center)
+    }
+
+    func vTop() -> some View {
+        frame(maxHeight: .infinity, alignment: .top)
+    }
+
+    func vBottom() -> some View {
+        frame(maxHeight: .infinity, alignment: .bottom)
+    }
+
+    func vCenter() -> some View {
+        frame(maxHeight: .infinity, alignment: .center)
+    }
 }
 
 @available(iOS 15, *)
