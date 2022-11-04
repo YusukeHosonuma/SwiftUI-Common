@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Selecct Xcode 13.3.1
-        run: sudo xcode-select -s '/Applications/Xcode_13.3.1.app/Contents/Developer'
+      - name: Selecct Xcode 14.1
+        run: sudo xcode-select -s '/Applications/Xcode_14.1.app/Contents/Developer'
 
       - name: Build
         run: xcodebuild build -destination 'name=iPhone 13' -scheme 'SwiftUI-Common'

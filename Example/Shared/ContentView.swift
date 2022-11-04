@@ -79,6 +79,9 @@ struct ContentView: View {
                     navigationLink("SliderValue") {
                         SliderView()
                     }
+                    navigationLink("Space") {
+                        SpaceExampleView()
+                    }
                 }
 
                 Section("Compatible") {
