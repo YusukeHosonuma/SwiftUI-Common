@@ -606,6 +606,23 @@ var body: some View {
 </details>
 
 
+## Misc
+  
+[Space.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/Space.swift.swift)
+
+<details>
+<summary>Space(...)</summary>
+    
+```swift
+// Alias for `Spacer().frame(width: 10)`
+Space(width: 10)
+
+// Alias for `Spacer().frame(height: 10)`
+Space(height: 10)
+```
+</details>
+
+
 ## Concurrency extensions
   
 [Task+.swift](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/Extension/Task%2B.swift)
