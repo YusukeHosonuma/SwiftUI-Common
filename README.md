@@ -10,6 +10,20 @@ Since this is an **experimental library**, we recommend that you copy (or use as
 
 ## Control
 
+
+<details>
+<summary>HiddenLink</summary>
+
+[HiddenLink](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/HiddenLink.swift) (`NavigationLink` that label is `EmptyView`)
+
+```swift
+HiddenLink(isActive: $isActive) {
+    ChildView()
+}
+```
+</details>
+
+
 <details>
 <summary>TextEdit</summary>
 
@@ -119,6 +133,7 @@ static var previews: some View {
 [WindowController](https://github.com/YusukeHosonuma/SwiftUI-Common/blob/main/Sources/SwiftUICommon/View/AppKit/WindowController.swift) (bridge to [NSWindowController](https://developer.apple.com/documentation/appkit/nswindowcontroller))<br>
 T.B.D
 </details>
+
 
 ## View extensions
 
